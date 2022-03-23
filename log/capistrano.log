@@ -818,3 +818,67 @@
  DEBUG [4e2e4780] 	tar: 
  DEBUG [4e2e4780] 	Exiting with failure status due to previous errors
  DEBUG [4e2e4780] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 02:26:11 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e0a6c929] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [e0a6c929] Command: ~/.rvm/bin/rvm version
+ DEBUG [e0a6c929] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [e0a6c929] 	
+ DEBUG [e0a6c929] Finished in 2.383 seconds with exit status 0 (successful).
+ DEBUG [0dabd5cc] Running ~/.rvm/bin/rvm current as deploy@13.208.193.125
+ DEBUG [0dabd5cc] Command: ~/.rvm/bin/rvm current
+ DEBUG [0dabd5cc] 	system
+ DEBUG [0dabd5cc] 	
+ DEBUG [0dabd5cc] Finished in 0.635 seconds with exit status 0 (successful).
+ DEBUG [e91e197b] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.193.125
+ DEBUG [e91e197b] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [e91e197b] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [e91e197b] 	
+ DEBUG [e91e197b] Finished in 0.827 seconds with exit status 0 (successful).
+  INFO [42b4bbb7] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.193.125
+ DEBUG [42b4bbb7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [42b4bbb7] Finished in 0.449 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-46e540ed72a13def73e8.sh 0.0%
+  INFO Uploading /tmp/git-ssh-46e540ed72a13def73e8.sh 100.0%
+  INFO [05d0bd00] Running /usr/bin/env chmod 700 /tmp/git-ssh-46e540ed72a13def73e8.sh as deploy@13.208.193.125
+ DEBUG [05d0bd00] Command: /usr/bin/env chmod 700 /tmp/git-ssh-46e540ed72a13def73e8.sh
+  INFO [05d0bd00] Finished in 0.451 seconds with exit status 0 (successful).
+  INFO [c4f15b39] Running /usr/bin/env git ls-remote git://github.com:TarunWAL/health_blog.git HEAD as deploy@13.208.193.125
+ DEBUG [c4f15b39] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-46e540ed72a13def73e8.sh" ; /usr/bin/env git ls-remote git://github.com:TarunWAL/health_blog.git HEAD )
+ DEBUG [c4f15b39] 	fatal: unable to look up github.com:TarunWAL (port 9418) (Name or service not known)
+ DEBUG [c4f15b39] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 02:29:49 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [22206c74] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [22206c74] Command: ~/.rvm/bin/rvm version
+ DEBUG [22206c74] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [22206c74] 	
+ DEBUG [22206c74] Finished in 2.406 seconds with exit status 0 (successful).
+ DEBUG [72b2d3a0] Running ~/.rvm/bin/rvm current as deploy@13.208.193.125
+ DEBUG [72b2d3a0] Command: ~/.rvm/bin/rvm current
+ DEBUG [72b2d3a0] 	system
+ DEBUG [72b2d3a0] 	
+ DEBUG [72b2d3a0] Finished in 0.624 seconds with exit status 0 (successful).
+ DEBUG [f59c8c80] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.193.125
+ DEBUG [f59c8c80] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [f59c8c80] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [f59c8c80] 	
+ DEBUG [f59c8c80] Finished in 0.812 seconds with exit status 0 (successful).
+  INFO [6519922b] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.193.125
+ DEBUG [6519922b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6519922b] Finished in 0.448 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ae0734a8a7d8310b9548.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ae0734a8a7d8310b9548.sh 100.0%
+  INFO [18a9a5d1] Running /usr/bin/env chmod 700 /tmp/git-ssh-ae0734a8a7d8310b9548.sh as deploy@13.208.193.125
+ DEBUG [18a9a5d1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-ae0734a8a7d8310b9548.sh
+  INFO [18a9a5d1] Finished in 0.452 seconds with exit status 0 (successful).
+  INFO [78255382] Running /usr/bin/env git ls-remote git://github.com/TarunWAL/health_blog.git HEAD as deploy@13.208.193.125
+ DEBUG [78255382] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ae0734a8a7d8310b9548.sh" ; /usr/bin/env git ls-remote git://github.com/TarunWAL/health_blog.git HEAD )
+ DEBUG [78255382] 	fatal: remote error: 
+ DEBUG [78255382] 	
+ DEBUG [78255382] 	  The unauthenticated git protocol on port 9418 is no longer supported.
+ DEBUG [78255382] 	
+ DEBUG [78255382] 	Please see https://github.blog/2021-09-01-improving-git-protocol-security-github/ for more information.
+ DEBUG [78255382] 	
