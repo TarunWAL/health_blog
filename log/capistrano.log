@@ -622,3 +622,199 @@
  DEBUG [01c6a4ba] 	tar: 
  DEBUG [01c6a4ba] 	Exiting with failure status due to previous errors
  DEBUG [01c6a4ba] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 02:19:39 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c673cba5] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [c673cba5] Command: ~/.rvm/bin/rvm version
+ DEBUG [c673cba5] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [c673cba5] 	
+ DEBUG [c673cba5] Finished in 2.347 seconds with exit status 0 (successful).
+ DEBUG [4db19478] Running ~/.rvm/bin/rvm current as deploy@13.208.193.125
+ DEBUG [4db19478] Command: ~/.rvm/bin/rvm current
+ DEBUG [4db19478] 	system
+ DEBUG [4db19478] 	
+ DEBUG [4db19478] Finished in 0.619 seconds with exit status 0 (successful).
+ DEBUG [3328af9b] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.193.125
+ DEBUG [3328af9b] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [3328af9b] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [3328af9b] 	
+ DEBUG [3328af9b] Finished in 0.809 seconds with exit status 0 (successful).
+  INFO [060a64dd] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.193.125
+ DEBUG [060a64dd] Command: /usr/bin/env mkdir -p /tmp
+  INFO [060a64dd] Finished in 0.446 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-e84b20631fd949ee8347.sh 0.0%
+  INFO Uploading /tmp/git-ssh-e84b20631fd949ee8347.sh 100.0%
+  INFO [1844a344] Running /usr/bin/env chmod 700 /tmp/git-ssh-e84b20631fd949ee8347.sh as deploy@13.208.193.125
+ DEBUG [1844a344] Command: /usr/bin/env chmod 700 /tmp/git-ssh-e84b20631fd949ee8347.sh
+  INFO [1844a344] Finished in 0.453 seconds with exit status 0 (successful).
+  INFO [45e83e44] Running /usr/bin/env git ls-remote git@github.com:TarunWAL/health_blog.git HEAD as deploy@13.208.193.125
+ DEBUG [45e83e44] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-e84b20631fd949ee8347.sh" ; /usr/bin/env git ls-remote git@github.com:TarunWAL/health_blog.git HEAD )
+ DEBUG [45e83e44] 	Warning: Permanently added the ECDSA host key for IP address '52.69.186.44' to the list of known hosts.
+ DEBUG [45e83e44] 	
+ DEBUG [45e83e44] 	2accd76ea8fa9ddd26d363910abef4cad3f6a6de
+ DEBUG [45e83e44] 		HEAD
+  INFO [45e83e44] Finished in 2.208 seconds with exit status 0 (successful).
+  INFO [446de631] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases as deploy@13.208.193.125
+ DEBUG [446de631] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases
+  INFO [446de631] Finished in 0.445 seconds with exit status 0 (successful).
+  INFO [3716a189] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets as deploy@13.208.193.125
+ DEBUG [3716a189] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets
+  INFO [3716a189] Finished in 0.478 seconds with exit status 0 (successful).
+  INFO [3823456c] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config as deploy@13.208.193.125
+ DEBUG [3823456c] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config
+  INFO [3823456c] Finished in 0.445 seconds with exit status 0 (successful).
+ DEBUG [959a646f] Running [ -f /home/deploy/health_blog/shared/config/database.yml ] as deploy@13.208.193.125
+ DEBUG [959a646f] Command: [ -f /home/deploy/health_blog/shared/config/database.yml ]
+ DEBUG [959a646f] Finished in 0.477 seconds with exit status 0 (successful).
+ DEBUG [a86d38a1] Running [ -f /home/deploy/health_blog/shared/config/application.yml ] as deploy@13.208.193.125
+ DEBUG [a86d38a1] Command: [ -f /home/deploy/health_blog/shared/config/application.yml ]
+ DEBUG [a86d38a1] Finished in 0.438 seconds with exit status 0 (successful).
+ DEBUG [3d1392cc] Running [ -f /home/deploy/health_blog/current/REVISION ] as deploy@13.208.193.125
+ DEBUG [3d1392cc] Command: [ -f /home/deploy/health_blog/current/REVISION ]
+ DEBUG [3d1392cc] Finished in 0.478 seconds with exit status 1 (failed).
+ DEBUG [1c269992] Running [ -f /home/deploy/health_blog/repo/HEAD ] as deploy@13.208.193.125
+ DEBUG [1c269992] Command: [ -f /home/deploy/health_blog/repo/HEAD ]
+ DEBUG [1c269992] Finished in 0.450 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/health_blog/repo
+ DEBUG [5d8d2a3c] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [5d8d2a3c] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [5d8d2a3c] Finished in 0.477 seconds with exit status 0 (successful).
+  INFO [b8dcc111] Running /usr/bin/env git remote set-url origin git@github.com:TarunWAL/health_blog.git as deploy@13.208.193.125
+ DEBUG [b8dcc111] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-e84b20631fd949ee8347.sh" ; /usr/bin/env git remote set-url origin git@github.com:TarunWAL/health_blog.git )
+  INFO [b8dcc111] Finished in 0.446 seconds with exit status 0 (successful).
+  INFO [cb427109] Running /usr/bin/env git remote update --prune as deploy@13.208.193.125
+ DEBUG [cb427109] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-e84b20631fd949ee8347.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [cb427109] 	Fetching origin
+ DEBUG [cb427109] 	
+ DEBUG [cb427109] 	remote: Enumerating objects: 11, done.[K
+ DEBUG [cb427109] 	
+ DEBUG [cb427109] 	remote: Counting objects:   9% (1/11)[K
+ DEBUG [cb427109] 	remote: Counting objects:  18% (2/11)[K
+ DEBUG [cb427109] 	remote: Counting objects:  27% (3/11)[K
+ DEBUG [cb427109] 	remote: Counting objects:  36% (4/11)[K
+ DEBUG [cb427109] 	remote: Counting objects:  45% (5/11)[K
+ DEBUG [cb427109] 	remote: Counting objects:  54% (6/11)[K
+ DEBUG [cb427109] 	remote: Counting objects:  63% (7/11)[K
+ DEBUG [cb427109] 	remote: Counting objects:  72% (8/11)[K
+ DEBUG [cb427109] 	remote: Counting objects:  81% (9/11)[K
+ DEBUG [cb427109] 	remote: Counting objects:  90% (10/11)[K
+ DEBUG [cb427109] 	remote: Counting objects: 100% (11/11)[K
+ DEBUG [cb427109] 	remote: Counting objects: 100% (11/11), done.[K
+ DEBUG [cb427109] 	
+ DEBUG [cb427109] 	remote: Compressing objects:  33% (1/3)[K
+ DEBUG [cb427109] 	remote: Compressing objects:  66% (2/3)[K
+ DEBUG [cb427109] 	remote: Compressing objects: 100% (3/3)[K
+ DEBUG [cb427109] 	remote: Compressing objects: 100% (3/3), done.[K
+ DEBUG [cb427109] 	
+ DEBUG [cb427109] 	remote: Total 6 (delta 3), reused 6 (delta 3), pack-reused 0[K
+ DEBUG [cb427109] 	
+ DEBUG [cb427109] 	Unpacking objects:  16% (1/6)
+ DEBUG [cb427109] 	Unpacking objects:  33% (2/6)
+ DEBUG [cb427109] 	Unpacking objects:  50% (3/6)
+ DEBUG [cb427109] 	Unpacking objects:  66% (4/6)
+ DEBUG [cb427109] 	Unpacking objects:  83% (5/6)
+ DEBUG [cb427109] 	Unpacking objects: 100% (6/6)
+ DEBUG [cb427109] 	Unpacking objects: 100% (6/6), 5.50 KiB | 2.75 MiB/s, done.
+ DEBUG [cb427109] 	
+ DEBUG [cb427109] 	From github.com:TarunWAL/health_blog
+ DEBUG [cb427109] 	
+ DEBUG [cb427109] 	   d4e6057..2accd76  main       -> main
+ DEBUG [cb427109] 	
+  INFO [cb427109] Finished in 2.415 seconds with exit status 0 (successful).
+ DEBUG [66571ae7] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [66571ae7] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [66571ae7] Finished in 0.456 seconds with exit status 0 (successful).
+  INFO [942f6788] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220323204950 as deploy@13.208.193.125
+ DEBUG [942f6788] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-e84b20631fd949ee8347.sh" ; /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220323204950 )
+  INFO [942f6788] Finished in 0.482 seconds with exit status 0 (successful).
+  INFO [9718f37f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220323204950 as deploy@13.208.193.125
+ DEBUG [9718f37f] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-e84b20631fd949ee8347.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220323204950 )
+ DEBUG [9718f37f] 	fatal: not a valid object name: master
+ DEBUG [9718f37f] 	
+ DEBUG [9718f37f] 	tar: 
+ DEBUG [9718f37f] 	This does not look like a tar archive
+ DEBUG [9718f37f] 	
+ DEBUG [9718f37f] 	tar: 
+ DEBUG [9718f37f] 	Exiting with failure status due to previous errors
+ DEBUG [9718f37f] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 02:23:00 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [738251c3] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [738251c3] Command: ~/.rvm/bin/rvm version
+ DEBUG [738251c3] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [738251c3] 	
+ DEBUG [738251c3] Finished in 2.413 seconds with exit status 0 (successful).
+ DEBUG [2cd000af] Running ~/.rvm/bin/rvm current as deploy@13.208.193.125
+ DEBUG [2cd000af] Command: ~/.rvm/bin/rvm current
+ DEBUG [2cd000af] 	system
+ DEBUG [2cd000af] 	
+ DEBUG [2cd000af] Finished in 0.624 seconds with exit status 0 (successful).
+ DEBUG [2420a839] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.193.125
+ DEBUG [2420a839] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [2420a839] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [2420a839] 	
+ DEBUG [2420a839] Finished in 0.811 seconds with exit status 0 (successful).
+  INFO [f79ed990] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.193.125
+ DEBUG [f79ed990] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f79ed990] Finished in 0.448 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-4e348b61acae020fcc26.sh 0.0%
+  INFO Uploading /tmp/git-ssh-4e348b61acae020fcc26.sh 100.0%
+  INFO [6cdc7e6a] Running /usr/bin/env chmod 700 /tmp/git-ssh-4e348b61acae020fcc26.sh as deploy@13.208.193.125
+ DEBUG [6cdc7e6a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-4e348b61acae020fcc26.sh
+  INFO [6cdc7e6a] Finished in 0.451 seconds with exit status 0 (successful).
+  INFO [08c00721] Running /usr/bin/env git ls-remote git@github.com:TarunWAL/health_blog.git HEAD as deploy@13.208.193.125
+ DEBUG [08c00721] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4e348b61acae020fcc26.sh" ; /usr/bin/env git ls-remote git@github.com:TarunWAL/health_blog.git HEAD )
+ DEBUG [08c00721] 	2accd76ea8fa9ddd26d363910abef4cad3f6a6de
+ DEBUG [08c00721] 		HEAD
+  INFO [08c00721] Finished in 2.281 seconds with exit status 0 (successful).
+  INFO [aa5a9bea] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases as deploy@13.208.193.125
+ DEBUG [aa5a9bea] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases
+  INFO [aa5a9bea] Finished in 0.448 seconds with exit status 0 (successful).
+  INFO [87c22df4] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets as deploy@13.208.193.125
+ DEBUG [87c22df4] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets
+  INFO [87c22df4] Finished in 0.494 seconds with exit status 0 (successful).
+  INFO [6b7a845b] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config as deploy@13.208.193.125
+ DEBUG [6b7a845b] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config
+  INFO [6b7a845b] Finished in 0.443 seconds with exit status 0 (successful).
+ DEBUG [2f4c60e8] Running [ -f /home/deploy/health_blog/shared/config/database.yml ] as deploy@13.208.193.125
+ DEBUG [2f4c60e8] Command: [ -f /home/deploy/health_blog/shared/config/database.yml ]
+ DEBUG [2f4c60e8] Finished in 0.501 seconds with exit status 0 (successful).
+ DEBUG [1a76b600] Running [ -f /home/deploy/health_blog/shared/config/application.yml ] as deploy@13.208.193.125
+ DEBUG [1a76b600] Command: [ -f /home/deploy/health_blog/shared/config/application.yml ]
+ DEBUG [1a76b600] Finished in 0.452 seconds with exit status 0 (successful).
+ DEBUG [23c4c11d] Running [ -f /home/deploy/health_blog/current/REVISION ] as deploy@13.208.193.125
+ DEBUG [23c4c11d] Command: [ -f /home/deploy/health_blog/current/REVISION ]
+ DEBUG [23c4c11d] Finished in 0.494 seconds with exit status 1 (failed).
+ DEBUG [83c17451] Running [ -f /home/deploy/health_blog/repo/HEAD ] as deploy@13.208.193.125
+ DEBUG [83c17451] Command: [ -f /home/deploy/health_blog/repo/HEAD ]
+ DEBUG [83c17451] Finished in 0.451 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/health_blog/repo
+ DEBUG [c750c68b] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [c750c68b] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [c750c68b] Finished in 0.491 seconds with exit status 0 (successful).
+  INFO [bbc680e0] Running /usr/bin/env git remote set-url origin git@github.com:TarunWAL/health_blog.git as deploy@13.208.193.125
+ DEBUG [bbc680e0] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4e348b61acae020fcc26.sh" ; /usr/bin/env git remote set-url origin git@github.com:TarunWAL/health_blog.git )
+  INFO [bbc680e0] Finished in 0.451 seconds with exit status 0 (successful).
+  INFO [8a3be407] Running /usr/bin/env git remote update --prune as deploy@13.208.193.125
+ DEBUG [8a3be407] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4e348b61acae020fcc26.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8a3be407] 	Fetching origin
+ DEBUG [8a3be407] 	
+  INFO [8a3be407] Finished in 2.287 seconds with exit status 0 (successful).
+ DEBUG [9449d893] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [9449d893] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [9449d893] Finished in 0.453 seconds with exit status 0 (successful).
+  INFO [31cc46af] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220323205311 as deploy@13.208.193.125
+ DEBUG [31cc46af] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4e348b61acae020fcc26.sh" ; /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220323205311 )
+  INFO [31cc46af] Finished in 0.497 seconds with exit status 0 (successful).
+  INFO [4e2e4780] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220323205311 as deploy@13.208.193.125
+ DEBUG [4e2e4780] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4e348b61acae020fcc26.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220323205311 )
+ DEBUG [4e2e4780] 	fatal: not a valid object name: master
+ DEBUG [4e2e4780] 	
+ DEBUG [4e2e4780] 	tar: 
+ DEBUG [4e2e4780] 	This does not look like a tar archive
+ DEBUG [4e2e4780] 	
+ DEBUG [4e2e4780] 	tar: 
+ DEBUG [4e2e4780] 	Exiting with failure status due to previous errors
+ DEBUG [4e2e4780] 	

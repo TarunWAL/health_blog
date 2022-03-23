@@ -2,7 +2,7 @@
 lock "~> 3.17.0"
 
 set :application, 'health_blog'
-set :repo_url, 'git@github.com:TarunWAL/health_blog.git' # Edit this to match your repository
+set :repo_url, 'git://github.com:TarunWAL/health_blog.git' # Edit this to match your repository
 set :branch, :master
 set :deploy_to, '/home/deploy/health_blog'
 set :pty, true
