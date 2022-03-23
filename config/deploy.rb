@@ -3,7 +3,7 @@ lock "~> 3.17.0"
 
 set :application, 'health_blog'
 set :repo_url, 'https://github.com/TarunWAL/health_blog.git' # Edit this to match your repository
-set :branch, :master
+set :branch, :main
 set :deploy_to, '/home/deploy/health_blog'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
