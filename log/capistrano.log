@@ -4,3 +4,621 @@
   INFO ---------------------------------------------------------------------------
  DEBUG [c9cfbe71] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
  DEBUG [c9cfbe71] Command: ~/.rvm/bin/rvm version
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 01:28:48 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [54241aaf] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [54241aaf] Command: ~/.rvm/bin/rvm version
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 01:35:02 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b97f0365] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [b97f0365] Command: ~/.rvm/bin/rvm version
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 02:07:12 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [11e0db1e] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [11e0db1e] Command: ~/.rvm/bin/rvm version
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 02:09:39 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [549593d3] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [549593d3] Command: ~/.rvm/bin/rvm version
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 02:13:47 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [cc429e5c] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [cc429e5c] Command: ~/.rvm/bin/rvm version
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 02:15:52 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e6028bf8] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [e6028bf8] Command: ~/.rvm/bin/rvm version
+ DEBUG [e6028bf8] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [e6028bf8] 	
+ DEBUG [e6028bf8] Finished in 2.380 seconds with exit status 0 (successful).
+ DEBUG [ff4ba3d7] Running ~/.rvm/bin/rvm current as deploy@13.208.193.125
+ DEBUG [ff4ba3d7] Command: ~/.rvm/bin/rvm current
+ DEBUG [ff4ba3d7] 	system
+ DEBUG [ff4ba3d7] 	
+ DEBUG [ff4ba3d7] Finished in 0.623 seconds with exit status 0 (successful).
+ DEBUG [ea13fbfe] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.193.125
+ DEBUG [ea13fbfe] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [ea13fbfe] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [ea13fbfe] 	
+ DEBUG [ea13fbfe] Finished in 0.839 seconds with exit status 0 (successful).
+  INFO [472157ce] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.193.125
+ DEBUG [472157ce] Command: /usr/bin/env mkdir -p /tmp
+  INFO [472157ce] Finished in 0.442 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-fd7d53a05276d22e4b46.sh 0.0%
+  INFO Uploading /tmp/git-ssh-fd7d53a05276d22e4b46.sh 100.0%
+  INFO [6a2e0da0] Running /usr/bin/env chmod 700 /tmp/git-ssh-fd7d53a05276d22e4b46.sh as deploy@13.208.193.125
+ DEBUG [6a2e0da0] Command: /usr/bin/env chmod 700 /tmp/git-ssh-fd7d53a05276d22e4b46.sh
+  INFO [6a2e0da0] Finished in 0.449 seconds with exit status 0 (successful).
+  INFO [f1c6b348] Running /usr/bin/env git ls-remote git@github.com:TarunWAL/health_blog.git HEAD as deploy@13.208.193.125
+ DEBUG [f1c6b348] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fd7d53a05276d22e4b46.sh" ; /usr/bin/env git ls-remote git@github.com:TarunWAL/health_blog.git HEAD )
+ DEBUG [f1c6b348] 	d4e605776b9eff8f70955390a6776d40e927915e
+ DEBUG [f1c6b348] 		
+ DEBUG [f1c6b348] 	HEAD
+  INFO [f1c6b348] Finished in 2.256 seconds with exit status 0 (successful).
+  INFO [8aaee4bd] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases as deploy@13.208.193.125
+ DEBUG [8aaee4bd] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases
+  INFO [8aaee4bd] Finished in 0.430 seconds with exit status 0 (successful).
+  INFO [075fa730] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets as deploy@13.208.193.125
+ DEBUG [075fa730] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets
+  INFO [075fa730] Finished in 0.477 seconds with exit status 0 (successful).
+  INFO [772e0430] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config as deploy@13.208.193.125
+ DEBUG [772e0430] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config
+  INFO [772e0430] Finished in 0.435 seconds with exit status 0 (successful).
+ DEBUG [7217280a] Running [ -f /home/deploy/health_blog/shared/config/database.yml ] as deploy@13.208.193.125
+ DEBUG [7217280a] Command: [ -f /home/deploy/health_blog/shared/config/database.yml ]
+ DEBUG [7217280a] Finished in 0.481 seconds with exit status 0 (successful).
+ DEBUG [122b247b] Running [ -f /home/deploy/health_blog/shared/config/application.yml ] as deploy@13.208.193.125
+ DEBUG [122b247b] Command: [ -f /home/deploy/health_blog/shared/config/application.yml ]
+ DEBUG [122b247b] Finished in 0.446 seconds with exit status 0 (successful).
+ DEBUG [7193128f] Running [ -f /home/deploy/health_blog/current/REVISION ] as deploy@13.208.193.125
+ DEBUG [7193128f] Command: [ -f /home/deploy/health_blog/current/REVISION ]
+ DEBUG [7193128f] Finished in 0.480 seconds with exit status 1 (failed).
+ DEBUG [2470460c] Running [ -f /home/deploy/health_blog/repo/HEAD ] as deploy@13.208.193.125
+ DEBUG [2470460c] Command: [ -f /home/deploy/health_blog/repo/HEAD ]
+ DEBUG [2470460c] Finished in 0.458 seconds with exit status 1 (failed).
+ DEBUG [833057fa] Running if test ! -d /home/deploy/health_blog; then echo "Directory does not exist '/home/deploy/health_blog'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [833057fa] Command: if test ! -d /home/deploy/health_blog; then echo "Directory does not exist '/home/deploy/health_blog'" 1>&2; false; fi
+ DEBUG [833057fa] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [91f74f08] Running /usr/bin/env git clone --mirror git@github.com:TarunWAL/health_blog.git /home/deploy/health_blog/repo as deploy@13.208.193.125
+ DEBUG [91f74f08] Command: cd /home/deploy/health_blog && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fd7d53a05276d22e4b46.sh" ; /usr/bin/env git clone --mirror git@github.com:TarunWAL/health_blog.git /home/deploy/health_blog/repo )
+ DEBUG [91f74f08] 	Cloning into bare repository '/home/deploy/health_blog/repo'...
+ DEBUG [91f74f08] 	
+ DEBUG [91f74f08] 	remote: Enumerating objects: 2643, done.[K
+ DEBUG [91f74f08] 	
+ DEBUG [91f74f08] 	remote: Counting objects:   0% (1/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:   1% (27/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:   2% (53/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:   3% (80/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:   4% (106/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:   5% (133/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:   6% (159/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:   7% (186/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:   8% (212/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:   9% (238/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  10% (265/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  11% (291/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  12% (318/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  13% (344/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  14% (371/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  15% (397/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  16% (423/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  17% (450/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  18% (476/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  19% (503/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  20% (529/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  21% (556/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  22% (582/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  23% (608/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  24% (635/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  25% (661/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  26% (688/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  27% (714/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  28% (741/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  29% (767/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  30% (793/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  31% (820/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  32% (846/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  33% (873/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  34% (899/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  35% (926/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  36% (952/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  37% (978/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  38% (1005/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  39% (1031/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  40% (1058/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  41% (1084/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  42% (1111/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  43% (1137/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  44% (1163/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  45% (1190/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  46% (1216/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  47% (1243/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  48% (1269/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  49% (1296/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  50% (1322/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  51% (1348/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  52% (1375/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  53% (1401/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  54% (1428/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  55% (1454/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  56% (1481/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  57% (1507/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  58% (1533/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  59% (1560/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  60% (1586/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  61% (1613/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  62% (1639/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  63% (1666/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  64% (1692/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  65% (1718/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  66% (1745/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  67% (1771/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  68% (1798/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  69% (1824/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  70% (1851/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  71% (1877/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  72% (1903/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  73% (1930/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  74% (1956/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  75% (1983/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  76% (2009/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  77% (2036/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  78% (2062/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  79% (2088/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  80% (2115/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  81% (2141/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  82% (2168/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  83% (2194/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  84% (2221/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  85% (2247/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  86% (2273/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  87% (2300/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  88% (2326/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  89% (2353/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  90% (2379/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  91% (2406/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  92% (2432/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  93% (2458/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  94% (2485/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  95% (2511/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  96% (2538/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  97% (2564/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  98% (2591/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects:  99% (2617/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects: 100% (2643/2643)[K
+ DEBUG [91f74f08] 	remote: Counting objects: 100% (2643/2643), done.[K
+ DEBUG [91f74f08] 	
+ DEBUG [91f74f08] 	remote: Compressing objects:   0% (1/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:   1% (25/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:   2% (50/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:   3% (75/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:   4% (100/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:   5% (125/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:   6% (150/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:   7% (175/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:   8% (199/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:   9% (224/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  10% (249/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  11% (274/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  12% (299/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  13% (324/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  14% (349/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  15% (373/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  16% (398/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  17% (423/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  18% (448/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  19% (473/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  20% (498/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  21% (523/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  22% (547/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  23% (572/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  24% (597/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  25% (622/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  26% (647/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  27% (672/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  28% (697/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  29% (721/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  30% (746/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  31% (771/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  32% (796/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  33% (821/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  34% (846/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  35% (871/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  36% (895/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  37% (920/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  38% (945/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  39% (970/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  40% (995/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  41% (1020/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  42% (1045/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  43% (1069/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  44% (1094/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  45% (1119/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  46% (1144/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  47% (1169/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  48% (1194/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  49% (1219/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  50% (1243/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  51% (1268/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  52% (1293/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  53% (1318/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  54% (1343/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  55% (1368/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  56% (1393/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  57% (1418/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  58% (1442/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  59% (1467/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  60% (1492/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  61% (1517/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  62% (1542/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  63% (1567/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  64% (1592/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  65% (1616/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  66% (1641/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  67% (1666/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  68% (1691/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  69% (1716/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  70% (1741/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  71% (1766/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  72% (1790/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  73% (1815/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  74% (1840/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  75% (1865/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  76% (1890/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  77% (1915/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  78% (1940/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  79% (1964/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  80% (1989/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  81% (2014/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  82% (2039/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  83% (2064/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  84% (2089/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  85% (2114/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  86% (2138/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  87% (2163/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  88% (2188/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  89% (2213/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  90% (2238/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  91% (2263/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  92% (2288/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  93% (2312/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  94% (2337/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  95% (2362/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  96% (2387/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  97% (2412/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  98% (2437/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects:  99% (2462/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects: 100% (2486/2486)[K
+ DEBUG [91f74f08] 	remote: Compressing objects: 100% (2486/2486), done.[K
+ DEBUG [91f74f08] 	
+ DEBUG [91f74f08] 	Receiving objects:   0% (1/2643)
+ DEBUG [91f74f08] 	Receiving objects:   1% (27/2643)
+ DEBUG [91f74f08] 	Receiving objects:   2% (53/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:   3% (80/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:   4% (106/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:   5% (133/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:   6% (159/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:   7% (186/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:   8% (212/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:   9% (238/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  10% (265/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  11% (291/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  12% (318/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  13% (344/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  14% (371/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  15% (397/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  16% (423/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  17% (450/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  18% (476/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  19% (503/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  20% (529/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  21% (556/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  22% (582/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  23% (608/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  24% (635/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  25% (661/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  26% (688/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  27% (714/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  28% (741/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  29% (767/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  30% (793/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  31% (820/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  32% (846/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  33% (873/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  34% (899/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  35% (926/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  36% (952/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  37% (978/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  38% (1005/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  39% (1031/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  40% (1058/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  41% (1084/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  42% (1111/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  43% (1137/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  44% (1163/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  45% (1190/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  46% (1216/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  47% (1243/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  48% (1269/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  49% (1296/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  50% (1322/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  51% (1348/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  52% (1375/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  53% (1401/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  54% (1428/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  55% (1454/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  56% (1481/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  57% (1507/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  58% (1533/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  59% (1560/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  60% (1586/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  61% (1613/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  62% (1639/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  63% (1666/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  64% (1692/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  65% (1718/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  66% (1745/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  67% (1771/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  68% (1798/2643), 372.00 KiB | 685.00 KiB/s
+ DEBUG [91f74f08] 	Receiving objects:  69% (1824/2643), 4.53 MiB | 4.39 MiB/s    
+ DEBUG [91f74f08] 	Receiving objects:  70% (1851/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  71% (1877/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  72% (1903/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  73% (1930/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  74% (1956/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  75% (1983/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  76% (2009/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  77% (2036/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  78% (2062/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  79% (2088/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  80% (2115/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  81% (2141/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  82% (2168/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  83% (2194/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  84% (2221/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  85% (2247/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  86% (2273/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  87% (2300/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  88% (2326/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  89% (2353/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  90% (2379/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  91% (2406/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  92% (2432/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  93% (2458/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  94% (2485/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  95% (2511/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  96% (2538/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  97% (2564/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  98% (2591/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects:  99% (2617/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	remote: Total 2643 (delta 73), reused 2640 (delta 70), pack-reused 0[K
+ DEBUG [91f74f08] 	
+ DEBUG [91f74f08] 	Receiving objects: 100% (2643/2643), 4.53 MiB | 4.39 MiB/s
+ DEBUG [91f74f08] 	Receiving objects: 100% (2643/2643), 6.44 MiB | 5.43 MiB/s, done.
+ DEBUG [91f74f08] 	
+ DEBUG [91f74f08] 	Resolving deltas:   0% (0/73)
+ DEBUG [91f74f08] 	Resolving deltas:   2% (2/73)
+ DEBUG [91f74f08] 	Resolving deltas:   5% (4/73)
+ DEBUG [91f74f08] 	Resolving deltas:   8% (6/73)
+ DEBUG [91f74f08] 	Resolving deltas:  10% (8/73)
+ DEBUG [91f74f08] 	Resolving deltas:  20% (15/73)
+ DEBUG [91f74f08] 	Resolving deltas:  23% (17/73)
+ DEBUG [91f74f08] 	Resolving deltas:  24% (18/73)
+ DEBUG [91f74f08] 	Resolving deltas:  26% (19/73)
+ DEBUG [91f74f08] 	Resolving deltas:  27% (20/73)
+ DEBUG [91f74f08] 	Resolving deltas:  30% (22/73)
+ DEBUG [91f74f08] 	Resolving deltas:  31% (23/73)
+ DEBUG [91f74f08] 	Resolving deltas:  32% (24/73)
+ DEBUG [91f74f08] 	Resolving deltas:  34% (25/73)
+ DEBUG [91f74f08] 	Resolving deltas:  39% (29/73)
+ DEBUG [91f74f08] 	Resolving deltas:  47% (35/73)
+ DEBUG [91f74f08] 	Resolving deltas:  53% (39/73)
+ DEBUG [91f74f08] 	Resolving deltas:  54% (40/73)
+ DEBUG [91f74f08] 	Resolving deltas:  67% (49/73)
+ DEBUG [91f74f08] 	Resolving deltas:  69% (51/73)
+ DEBUG [91f74f08] 	Resolving deltas:  79% (58/73)
+ DEBUG [91f74f08] 	Resolving deltas:  82% (60/73)
+ DEBUG [91f74f08] 	Resolving deltas:  83% (61/73)
+ DEBUG [91f74f08] 	Resolving deltas:  86% (63/73)
+ DEBUG [91f74f08] 	Resolving deltas:  87% (64/73)
+ DEBUG [91f74f08] 	Resolving deltas:  90% (66/73)
+ DEBUG [91f74f08] 	Resolving deltas:  94% (69/73)
+ DEBUG [91f74f08] 	Resolving deltas:  95% (70/73)
+ DEBUG [91f74f08] 	Resolving deltas:  98% (72/73)
+ DEBUG [91f74f08] 	Resolving deltas: 100% (73/73)
+ DEBUG [91f74f08] 	Resolving deltas: 100% (73/73), done.
+ DEBUG [91f74f08] 	
+  INFO [91f74f08] Finished in 3.685 seconds with exit status 0 (successful).
+ DEBUG [43ee6935] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [43ee6935] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [43ee6935] Finished in 0.425 seconds with exit status 0 (successful).
+  INFO [597558d8] Running /usr/bin/env git remote set-url origin git@github.com:TarunWAL/health_blog.git as deploy@13.208.193.125
+ DEBUG [597558d8] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fd7d53a05276d22e4b46.sh" ; /usr/bin/env git remote set-url origin git@github.com:TarunWAL/health_blog.git )
+  INFO [597558d8] Finished in 0.432 seconds with exit status 0 (successful).
+  INFO [12091c63] Running /usr/bin/env git remote update --prune as deploy@13.208.193.125
+ DEBUG [12091c63] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fd7d53a05276d22e4b46.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [12091c63] 	Fetching origin
+ DEBUG [12091c63] 	
+  INFO [12091c63] Finished in 2.238 seconds with exit status 0 (successful).
+ DEBUG [29648738] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [29648738] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [29648738] Finished in 0.430 seconds with exit status 0 (successful).
+  INFO [650dd14f] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220323204603 as deploy@13.208.193.125
+ DEBUG [650dd14f] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fd7d53a05276d22e4b46.sh" ; /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220323204603 )
+  INFO [650dd14f] Finished in 0.478 seconds with exit status 0 (successful).
+  INFO [214190e4] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220323204603 as deploy@13.208.193.125
+ DEBUG [214190e4] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-fd7d53a05276d22e4b46.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220323204603 )
+ DEBUG [214190e4] 	fatal: not a valid object name: master
+ DEBUG [214190e4] 	
+ DEBUG [214190e4] 	tar: 
+ DEBUG [214190e4] 	This does not look like a tar archive
+ DEBUG [214190e4] 	
+ DEBUG [214190e4] 	tar: 
+ DEBUG [214190e4] 	Exiting with failure status due to previous errors
+ DEBUG [214190e4] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 02:18:12 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6ecfaa8f] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [6ecfaa8f] Command: ~/.rvm/bin/rvm version
+ DEBUG [6ecfaa8f] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [6ecfaa8f] 	
+ DEBUG [6ecfaa8f] Finished in 2.347 seconds with exit status 0 (successful).
+ DEBUG [93882b9d] Running ~/.rvm/bin/rvm current as deploy@13.208.193.125
+ DEBUG [93882b9d] Command: ~/.rvm/bin/rvm current
+ DEBUG [93882b9d] 	system
+ DEBUG [93882b9d] 	
+ DEBUG [93882b9d] Finished in 0.605 seconds with exit status 0 (successful).
+ DEBUG [38c7260a] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.193.125
+ DEBUG [38c7260a] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [38c7260a] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [38c7260a] 	
+ DEBUG [38c7260a] Finished in 0.823 seconds with exit status 0 (successful).
+  INFO [29d8ac11] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.193.125
+ DEBUG [29d8ac11] Command: /usr/bin/env mkdir -p /tmp
+  INFO [29d8ac11] Finished in 0.443 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-48753e17061ee68387cb.sh 0.0%
+  INFO Uploading /tmp/git-ssh-48753e17061ee68387cb.sh 100.0%
+  INFO [74d7ec5c] Running /usr/bin/env chmod 700 /tmp/git-ssh-48753e17061ee68387cb.sh as deploy@13.208.193.125
+ DEBUG [74d7ec5c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-48753e17061ee68387cb.sh
+  INFO [74d7ec5c] Finished in 0.448 seconds with exit status 0 (successful).
+  INFO [0a6ea8cd] Running /usr/bin/env git ls-remote git@github.com:TarunWAL/health_blog.git HEAD as deploy@13.208.193.125
+ DEBUG [0a6ea8cd] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-48753e17061ee68387cb.sh" ; /usr/bin/env git ls-remote git@github.com:TarunWAL/health_blog.git HEAD )
+ DEBUG [0a6ea8cd] 	d4e605776b9eff8f70955390a6776d40e927915e
+ DEBUG [0a6ea8cd] 		HEAD
+  INFO [0a6ea8cd] Finished in 2.249 seconds with exit status 0 (successful).
+  INFO [ea2387df] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases as deploy@13.208.193.125
+ DEBUG [ea2387df] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases
+  INFO [ea2387df] Finished in 0.458 seconds with exit status 0 (successful).
+  INFO [efb47322] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets as deploy@13.208.193.125
+ DEBUG [efb47322] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets
+  INFO [efb47322] Finished in 0.473 seconds with exit status 0 (successful).
+  INFO [8bb937ef] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config as deploy@13.208.193.125
+ DEBUG [8bb937ef] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config
+  INFO [8bb937ef] Finished in 0.443 seconds with exit status 0 (successful).
+ DEBUG [7a47ca63] Running [ -f /home/deploy/health_blog/shared/config/database.yml ] as deploy@13.208.193.125
+ DEBUG [7a47ca63] Command: [ -f /home/deploy/health_blog/shared/config/database.yml ]
+ DEBUG [7a47ca63] Finished in 0.479 seconds with exit status 0 (successful).
+ DEBUG [1855322b] Running [ -f /home/deploy/health_blog/shared/config/application.yml ] as deploy@13.208.193.125
+ DEBUG [1855322b] Command: [ -f /home/deploy/health_blog/shared/config/application.yml ]
+ DEBUG [1855322b] Finished in 0.437 seconds with exit status 0 (successful).
+ DEBUG [d0e323a4] Running [ -f /home/deploy/health_blog/current/REVISION ] as deploy@13.208.193.125
+ DEBUG [d0e323a4] Command: [ -f /home/deploy/health_blog/current/REVISION ]
+ DEBUG [d0e323a4] Finished in 0.495 seconds with exit status 1 (failed).
+ DEBUG [f47a320f] Running [ -f /home/deploy/health_blog/repo/HEAD ] as deploy@13.208.193.125
+ DEBUG [f47a320f] Command: [ -f /home/deploy/health_blog/repo/HEAD ]
+ DEBUG [f47a320f] Finished in 0.450 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/health_blog/repo
+ DEBUG [f7abb15a] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [f7abb15a] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [f7abb15a] Finished in 0.496 seconds with exit status 0 (successful).
+  INFO [f11860c0] Running /usr/bin/env git remote set-url origin git@github.com:TarunWAL/health_blog.git as deploy@13.208.193.125
+ DEBUG [f11860c0] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-48753e17061ee68387cb.sh" ; /usr/bin/env git remote set-url origin git@github.com:TarunWAL/health_blog.git )
+  INFO [f11860c0] Finished in 0.439 seconds with exit status 0 (successful).
+  INFO [f5430a1e] Running /usr/bin/env git remote update --prune as deploy@13.208.193.125
+ DEBUG [f5430a1e] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-48753e17061ee68387cb.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f5430a1e] 	Fetching origin
+ DEBUG [f5430a1e] 	
+  INFO [f5430a1e] Finished in 2.255 seconds with exit status 0 (successful).
+ DEBUG [ea890387] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [ea890387] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [ea890387] Finished in 0.434 seconds with exit status 0 (successful).
+  INFO [cc73a2c3] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220323204823 as deploy@13.208.193.125
+ DEBUG [cc73a2c3] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-48753e17061ee68387cb.sh" ; /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220323204823 )
+  INFO [cc73a2c3] Finished in 0.498 seconds with exit status 0 (successful).
+  INFO [1935fbba] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220323204823 as deploy@13.208.193.125
+ DEBUG [1935fbba] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-48753e17061ee68387cb.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220323204823 )
+ DEBUG [1935fbba] 	fatal: not a valid object name: master
+ DEBUG [1935fbba] 	
+ DEBUG [1935fbba] 	tar: 
+ DEBUG [1935fbba] 	This does not look like a tar archive
+ DEBUG [1935fbba] 	
+ DEBUG [1935fbba] 	tar: 
+ DEBUG [1935fbba] 	Exiting with failure status due to previous errors
+ DEBUG [1935fbba] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 02:18:47 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9d106d01] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [9d106d01] Command: ~/.rvm/bin/rvm version
+ DEBUG [9d106d01] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [9d106d01] 	
+ DEBUG [9d106d01] Finished in 2.326 seconds with exit status 0 (successful).
+ DEBUG [7155fe2f] Running ~/.rvm/bin/rvm current as deploy@13.208.193.125
+ DEBUG [7155fe2f] Command: ~/.rvm/bin/rvm current
+ DEBUG [7155fe2f] 	system
+ DEBUG [7155fe2f] 	
+ DEBUG [7155fe2f] Finished in 0.604 seconds with exit status 0 (successful).
+ DEBUG [5a8ed766] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.193.125
+ DEBUG [5a8ed766] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [5a8ed766] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [5a8ed766] 	
+ DEBUG [5a8ed766] Finished in 0.804 seconds with exit status 0 (successful).
+  INFO [3d4a61ca] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.193.125
+ DEBUG [3d4a61ca] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3d4a61ca] Finished in 0.446 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-0675a57e34e6c8d25f04.sh 0.0%
+  INFO Uploading /tmp/git-ssh-0675a57e34e6c8d25f04.sh 100.0%
+  INFO [65dceae1] Running /usr/bin/env chmod 700 /tmp/git-ssh-0675a57e34e6c8d25f04.sh as deploy@13.208.193.125
+ DEBUG [65dceae1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-0675a57e34e6c8d25f04.sh
+  INFO [65dceae1] Finished in 0.448 seconds with exit status 0 (successful).
+  INFO [040e2980] Running /usr/bin/env git ls-remote git@github.com:TarunWAL/health_blog.git HEAD as deploy@13.208.193.125
+ DEBUG [040e2980] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0675a57e34e6c8d25f04.sh" ; /usr/bin/env git ls-remote git@github.com:TarunWAL/health_blog.git HEAD )
+ DEBUG [040e2980] 	d4e605776b9eff8f70955390a6776d40e927915e
+ DEBUG [040e2980] 		HEAD
+  INFO [040e2980] Finished in 2.230 seconds with exit status 0 (successful).
+  INFO [308ca439] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases as deploy@13.208.193.125
+ DEBUG [308ca439] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases
+  INFO [308ca439] Finished in 0.439 seconds with exit status 0 (successful).
+  INFO [326f579f] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets as deploy@13.208.193.125
+ DEBUG [326f579f] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets
+  INFO [326f579f] Finished in 0.479 seconds with exit status 0 (successful).
+  INFO [a7cbbefe] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config as deploy@13.208.193.125
+ DEBUG [a7cbbefe] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config
+  INFO [a7cbbefe] Finished in 0.445 seconds with exit status 0 (successful).
+ DEBUG [bcfde9c0] Running [ -f /home/deploy/health_blog/shared/config/database.yml ] as deploy@13.208.193.125
+ DEBUG [bcfde9c0] Command: [ -f /home/deploy/health_blog/shared/config/database.yml ]
+ DEBUG [bcfde9c0] Finished in 0.480 seconds with exit status 0 (successful).
+ DEBUG [4db8bf40] Running [ -f /home/deploy/health_blog/shared/config/application.yml ] as deploy@13.208.193.125
+ DEBUG [4db8bf40] Command: [ -f /home/deploy/health_blog/shared/config/application.yml ]
+ DEBUG [4db8bf40] Finished in 0.450 seconds with exit status 0 (successful).
+ DEBUG [8a282855] Running [ -f /home/deploy/health_blog/current/REVISION ] as deploy@13.208.193.125
+ DEBUG [8a282855] Command: [ -f /home/deploy/health_blog/current/REVISION ]
+ DEBUG [8a282855] Finished in 0.480 seconds with exit status 1 (failed).
+ DEBUG [26a062bd] Running [ -f /home/deploy/health_blog/repo/HEAD ] as deploy@13.208.193.125
+ DEBUG [26a062bd] Command: [ -f /home/deploy/health_blog/repo/HEAD ]
+ DEBUG [26a062bd] Finished in 0.451 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/health_blog/repo
+ DEBUG [fcff3944] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [fcff3944] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [fcff3944] Finished in 0.476 seconds with exit status 0 (successful).
+  INFO [d2ee5a78] Running /usr/bin/env git remote set-url origin git@github.com:TarunWAL/health_blog.git as deploy@13.208.193.125
+ DEBUG [d2ee5a78] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0675a57e34e6c8d25f04.sh" ; /usr/bin/env git remote set-url origin git@github.com:TarunWAL/health_blog.git )
+  INFO [d2ee5a78] Finished in 0.433 seconds with exit status 0 (successful).
+  INFO [1ab4a1cf] Running /usr/bin/env git remote update --prune as deploy@13.208.193.125
+ DEBUG [1ab4a1cf] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0675a57e34e6c8d25f04.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1ab4a1cf] 	Fetching origin
+ DEBUG [1ab4a1cf] 	
+  INFO [1ab4a1cf] Finished in 2.254 seconds with exit status 0 (successful).
+ DEBUG [b2e88205] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.193.125
+ DEBUG [b2e88205] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [b2e88205] Finished in 0.449 seconds with exit status 0 (successful).
+  INFO [b981b0fa] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220323204857 as deploy@13.208.193.125
+ DEBUG [b981b0fa] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0675a57e34e6c8d25f04.sh" ; /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220323204857 )
+  INFO [b981b0fa] Finished in 0.508 seconds with exit status 0 (successful).
+  INFO [01c6a4ba] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220323204857 as deploy@13.208.193.125
+ DEBUG [01c6a4ba] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0675a57e34e6c8d25f04.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220323204857 )
+ DEBUG [01c6a4ba] 	fatal: not a valid object name: master
+ DEBUG [01c6a4ba] 	
+ DEBUG [01c6a4ba] 	tar: 
+ DEBUG [01c6a4ba] 	This does not look like a tar archive
+ DEBUG [01c6a4ba] 	
+ DEBUG [01c6a4ba] 	tar: 
+ DEBUG [01c6a4ba] 	Exiting with failure status due to previous errors
+ DEBUG [01c6a4ba] 	
