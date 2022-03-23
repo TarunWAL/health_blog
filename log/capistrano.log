@@ -1,0 +1,6 @@
+# Logfile created on 2022-03-24 01:23:36 +0530 by logger.rb/v1.4.2
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 01:23:36 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c9cfbe71] Running ~/.rvm/bin/rvm version as deploy@13.208.193.125
+ DEBUG [c9cfbe71] Command: ~/.rvm/bin/rvm version

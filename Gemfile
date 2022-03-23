@@ -43,6 +43,8 @@ end
 gem 'figaro'
 group :development do
   gem 'capistrano', '~> 3.10', require: false
+  gem 'capistrano-rvm'
+  gem 'capistrano-puma'
   gem 'capistrano-rails', '~> 1.5', require: false
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'capistrano-db-tasks', require: false
