@@ -49,6 +49,7 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    
     bcrypt_pbkdf (1.1.0-x64-mingw32)
     bindex (0.8.1)
     bootsnap (1.8.1)
@@ -222,9 +223,7 @@ GEM
 
 PLATFORMS
   x64-mingw32
-  ruby 
-  x86_64-linux
-
+  
 DEPENDENCIES
   bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap (>= 1.1.0)

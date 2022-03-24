@@ -2080,3 +2080,1851 @@ lists.[0m
  DEBUG [3a7a013a] 	
  DEBUG [3a7a013a] 	["ruby", "x86_64-linux"], and there's no compatible match between those two
  DEBUG [3a7a013a] 	lists.[0m
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 11:20:32 +0530 cap deploy production
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bfe058b1] Running ~/.rvm/bin/rvm version as deploy@13.208.249.189
+ DEBUG [bfe058b1] Command: ~/.rvm/bin/rvm version
+ DEBUG [bfe058b1] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [bfe058b1] 	
+ DEBUG [bfe058b1] Finished in 3.126 seconds with exit status 0 (successful).
+ DEBUG [7e5c90a4] Running ~/.rvm/bin/rvm current as deploy@13.208.249.189
+ DEBUG [7e5c90a4] Command: ~/.rvm/bin/rvm current
+ DEBUG [7e5c90a4] 	system
+ DEBUG [7e5c90a4] 	
+ DEBUG [7e5c90a4] Finished in 0.804 seconds with exit status 0 (successful).
+ DEBUG [de874ce3] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.249.189
+ DEBUG [de874ce3] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [de874ce3] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [de874ce3] 	
+ DEBUG [de874ce3] Finished in 1.012 seconds with exit status 0 (successful).
+  INFO [0c046759] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.249.189
+ DEBUG [0c046759] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0c046759] Finished in 0.639 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-5330ffee34909492d30e.sh 0.0%
+  INFO Uploading /tmp/git-ssh-5330ffee34909492d30e.sh 100.0%
+  INFO [7aa1bfa9] Running /usr/bin/env chmod 700 /tmp/git-ssh-5330ffee34909492d30e.sh as deploy@13.208.249.189
+ DEBUG [7aa1bfa9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-5330ffee34909492d30e.sh
+  INFO [7aa1bfa9] Finished in 0.632 seconds with exit status 0 (successful).
+  INFO [4bc92c20] Running /usr/bin/env git ls-remote https://github.com/TarunWAL/health_blog.git HEAD as deploy@13.208.249.189
+ DEBUG [4bc92c20] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5330ffee34909492d30e.sh" ; /usr/bin/env git ls-remote https://github.com/TarunWAL/health_blog.git HEAD )
+ DEBUG [4bc92c20] 	f1be1d3cf018fe578059b51c4b35a3ba5ba9c113
+ DEBUG [4bc92c20] 		HEAD
+  INFO [4bc92c20] Finished in 0.929 seconds with exit status 0 (successful).
+  INFO [797a16bf] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases as deploy@13.208.249.189
+ DEBUG [797a16bf] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases
+  INFO [797a16bf] Finished in 0.645 seconds with exit status 0 (successful).
+  INFO [1d8e073b] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets as deploy@13.208.249.189
+ DEBUG [1d8e073b] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets
+  INFO [1d8e073b] Finished in 0.738 seconds with exit status 0 (successful).
+  INFO [b1767eb4] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config as deploy@13.208.249.189
+ DEBUG [b1767eb4] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config
+  INFO [b1767eb4] Finished in 0.641 seconds with exit status 0 (successful).
+ DEBUG [cf1e4f46] Running [ -f /home/deploy/health_blog/shared/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [cf1e4f46] Command: [ -f /home/deploy/health_blog/shared/config/database.yml ]
+ DEBUG [cf1e4f46] Finished in 0.671 seconds with exit status 0 (successful).
+ DEBUG [27e383e8] Running [ -f /home/deploy/health_blog/shared/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [27e383e8] Command: [ -f /home/deploy/health_blog/shared/config/application.yml ]
+ DEBUG [27e383e8] Finished in 0.617 seconds with exit status 0 (successful).
+ DEBUG [ad52e4dc] Running [ -f /home/deploy/health_blog/current/REVISION ] as deploy@13.208.249.189
+ DEBUG [ad52e4dc] Command: [ -f /home/deploy/health_blog/current/REVISION ]
+ DEBUG [ad52e4dc] Finished in 1.578 seconds with exit status 1 (failed).
+ DEBUG [1b8ba743] Running [ -f /home/deploy/health_blog/repo/HEAD ] as deploy@13.208.249.189
+ DEBUG [1b8ba743] Command: [ -f /home/deploy/health_blog/repo/HEAD ]
+ DEBUG [1b8ba743] Finished in 0.646 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/health_blog/repo
+ DEBUG [25dcbfbc] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [25dcbfbc] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [25dcbfbc] Finished in 0.679 seconds with exit status 0 (successful).
+  INFO [af97273c] Running /usr/bin/env git remote set-url origin https://github.com/TarunWAL/health_blog.git as deploy@13.208.249.189
+ DEBUG [af97273c] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5330ffee34909492d30e.sh" ; /usr/bin/env git remote set-url origin https://github.com/TarunWAL/health_blog.git )
+  INFO [af97273c] Finished in 1.083 seconds with exit status 0 (successful).
+  INFO [10a3fcd8] Running /usr/bin/env git remote update --prune as deploy@13.208.249.189
+ DEBUG [10a3fcd8] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5330ffee34909492d30e.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [10a3fcd8] 	Fetching origin
+ DEBUG [10a3fcd8] 	
+ DEBUG [10a3fcd8] 	remote: Enumerating objects: 7561, done.[K
+ DEBUG [10a3fcd8] 	
+ DEBUG [10a3fcd8] 	remote: Counting objects:   0% (1/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:   1% (76/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:   2% (152/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:   3% (227/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:   4% (303/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:   5% (379/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:   6% (454/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:   7% (530/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:   8% (605/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:   9% (681/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  10% (757/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  11% (832/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  12% (908/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  13% (983/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  14% (1059/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  15% (1135/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  16% (1210/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  17% (1286/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  18% (1361/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  19% (1437/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  20% (1513/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  21% (1588/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  22% (1664/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  23% (1740/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  24% (1815/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  25% (1891/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  26% (1966/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  27% (2042/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  28% (2118/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  29% (2193/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  30% (2269/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  31% (2344/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  32% (2420/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  33% (2496/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  34% (2571/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  35% (2647/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  36% (2722/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  37% (2798/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  38% (2874/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  39% (2949/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  40% (3025/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  41% (3101/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  42% (3176/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  43% (3252/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  44% (3327/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  45% (3403/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  46% (3479/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  47% (3554/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  48% (3630/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  49% (3705/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  50% (3781/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  51% (3857/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  52% (3932/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  53% (4008/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  54% (4083/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  55% (4159/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  56% (4235/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  57% (4310/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  58% (4386/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  59% (4461/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  60% (4537/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  61% (4613/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  62% (4688/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  63% (4764/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  64% (4840/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  65% (4915/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  66% (4991/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  67% (5066/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  68% (5142/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  69% (5218/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  70% (5293/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  71% (5369/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  72% (5444/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  73% (5520/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  74% (5596/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  75% (5671/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  76% (5747/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  77% (5822/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  78% (5898/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  79% (5974/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  80% (6049/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  81% (6125/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  82% (6201/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  83% (6276/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  84% (6352/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  85% (6427/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  86% (6503/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  87% (6579/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  88% (6654/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  89% (6730/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  90% (6805/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  91% (6881/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  92% (6957/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  93% (7032/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  94% (7108/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  95% (7183/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  96% (7259/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  97% (7335/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  98% (7410/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects:  99% (7486/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects: 100% (7561/7561)[K
+ DEBUG [10a3fcd8] 	remote: Counting objects: 100% (7561/7561), done.[K
+ DEBUG [10a3fcd8] 	
+ DEBUG [10a3fcd8] 	remote: Compressing objects:   0% (1/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:   1% (60/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:   2% (120/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:   3% (180/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:   4% (240/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:   5% (300/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:   6% (360/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:   7% (420/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:   8% (480/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:   9% (540/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  10% (600/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  11% (660/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  12% (719/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  13% (779/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  14% (839/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  15% (899/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  16% (959/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  17% (1019/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  18% (1079/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  19% (1139/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  20% (1199/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  21% (1259/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  22% (1319/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  23% (1378/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  24% (1438/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  25% (1498/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  26% (1558/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  27% (1618/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  28% (1678/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  29% (1738/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  30% (1798/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  31% (1858/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  32% (1918/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  33% (1978/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  34% (2037/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  35% (2097/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  36% (2157/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  37% (2217/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  38% (2277/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  39% (2337/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  40% (2397/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  41% (2457/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  42% (2517/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  43% (2577/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  44% (2637/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  45% (2696/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  46% (2756/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  47% (2816/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  48% (2876/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  49% (2936/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  50% (2996/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  51% (3056/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  52% (3116/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  53% (3176/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  54% (3236/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  55% (3296/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  56% (3355/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  57% (3415/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  58% (3475/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  59% (3535/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  60% (3595/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  61% (3655/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  62% (3715/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  63% (3775/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  64% (3835/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  65% (3895/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  66% (3955/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  67% (4014/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  68% (4074/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  69% (4134/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  70% (4194/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  71% (4254/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  72% (4314/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  73% (4374/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  74% (4434/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  75% (4494/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  76% (4554/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  77% (4614/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  78% (4673/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  79% (4733/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  80% (4793/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  81% (4853/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  82% (4913/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  83% (4973/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  84% (5033/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  85% (5093/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  86% (5153/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  87% (5213/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  88% (5273/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  89% (5332/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  90% (5392/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  91% (5452/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  92% (5512/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  93% (5572/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  94% (5632/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  95% (5692/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  96% (5752/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  97% (5812/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  98% (5872/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects:  99% (5932/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects: 100% (5991/5991)[K
+ DEBUG [10a3fcd8] 	remote: Compressing objects: 100% (5991/5991), done.[K
+ DEBUG [10a3fcd8] 	
+ DEBUG [10a3fcd8] 	Receiving objects:   0% (1/7555)
+ DEBUG [10a3fcd8] 	Receiving objects:   1% (76/7555)
+ DEBUG [10a3fcd8] 	Receiving objects:   1% (126/7555), 7.44 MiB | 13.55 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:   2% (152/7555), 7.44 MiB | 13.55 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:   3% (227/7555), 7.44 MiB | 13.55 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:   4% (303/7555), 7.44 MiB | 13.55 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:   5% (378/7555), 7.44 MiB | 13.55 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:   6% (454/7555), 7.44 MiB | 13.55 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:   7% (529/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:   8% (605/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:   9% (680/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  10% (756/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  11% (832/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  12% (907/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  13% (983/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  14% (1058/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  15% (1134/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  16% (1209/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  17% (1285/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  18% (1360/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  19% (1436/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  20% (1511/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  21% (1587/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  22% (1663/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  23% (1738/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  24% (1814/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  25% (1889/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  26% (1965/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  27% (2040/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  28% (2116/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  29% (2191/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  30% (2267/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  31% (2343/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  32% (2418/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  33% (2494/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  34% (2569/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  35% (2645/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  36% (2720/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  37% (2796/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  38% (2871/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  39% (2947/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  40% (3022/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  41% (3098/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  42% (3174/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  43% (3249/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  44% (3325/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  45% (3400/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  46% (3476/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  47% (3551/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  48% (3627/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  49% (3702/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  50% (3778/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  51% (3854/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  52% (3929/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  53% (4005/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  54% (4080/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  55% (4156/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  56% (4231/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  57% (4307/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  58% (4382/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  59% (4458/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  60% (4533/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  61% (4609/7555), 15.46 MiB | 13.92 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  62% (4685/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  63% (4760/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  64% (4836/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  65% (4911/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  66% (4987/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  67% (5062/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  68% (5138/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  69% (5213/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  70% (5289/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  71% (5365/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  72% (5440/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  73% (5516/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  74% (5591/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  75% (5667/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  76% (5742/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  77% (5818/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  78% (5893/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  79% (5969/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  80% (6044/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  81% (6120/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  82% (6196/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  83% (6271/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  84% (6347/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  85% (6422/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  86% (6498/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  87% (6573/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  88% (6649/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  89% (6724/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  90% (6800/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  91% (6876/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  92% (6951/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  93% (7027/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  94% (7102/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  95% (7178/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  96% (7253/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  97% (7329/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects:  98% (7404/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	remote: Total 7555 (delta 1123), reused 7555 (delta 1123), pack-reused 0[K
+ DEBUG [10a3fcd8] 	
+ DEBUG [10a3fcd8] 	Receiving objects:  99% (7480/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects: 100% (7555/7555), 23.26 MiB | 14.44 MiB/s
+ DEBUG [10a3fcd8] 	Receiving objects: 100% (7555/7555), 26.92 MiB | 14.18 MiB/s, done.
+ DEBUG [10a3fcd8] 	
+ DEBUG [10a3fcd8] 	Resolving deltas:   0% (0/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:   1% (15/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:   2% (23/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:   3% (35/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:   4% (49/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:   5% (57/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:   6% (69/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:   7% (79/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:   8% (90/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:   9% (102/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  10% (114/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  12% (136/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  15% (170/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  16% (182/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  17% (196/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  18% (204/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  19% (216/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  20% (228/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  21% (236/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  22% (254/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  23% (260/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  24% (270/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  25% (283/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  26% (292/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  27% (304/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  28% (317/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  29% (327/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  30% (337/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  31% (349/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  32% (360/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  33% (371/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  36% (412/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  37% (417/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  38% (427/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  39% (438/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  40% (450/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  41% (461/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  42% (477/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  43% (484/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  44% (496/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  45% (506/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  46% (517/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  47% (528/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  48% (540/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  49% (551/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  50% (562/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  51% (575/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  52% (584/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  53% (596/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  54% (607/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  55% (618/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  56% (637/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  57% (643/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  58% (652/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  59% (665/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  60% (674/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  61% (686/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  64% (729/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  65% (730/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  66% (745/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  67% (760/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  68% (772/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  69% (778/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  70% (788/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  71% (799/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  72% (812/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  73% (830/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  74% (836/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  75% (843/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  76% (857/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  77% (870/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  78% (878/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  79% (888/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  80% (899/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  81% (910/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  82% (928/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  83% (934/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  84% (945/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  85% (960/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  86% (972/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  87% (978/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  88% (991/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  89% (1000/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  90% (1012/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  91% (1028/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  92% (1040/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  93% (1045/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  94% (1063/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas:  99% (1112/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas: 100% (1123/1123)
+ DEBUG [10a3fcd8] 	Resolving deltas: 100% (1123/1123), completed with 3 local objects.
+ DEBUG [10a3fcd8] 	
+ DEBUG [10a3fcd8] 	From https://github.com/TarunWAL/health_blog
+ DEBUG [10a3fcd8] 	
+ DEBUG [10a3fcd8] 	   e8d2b5c..f1be1d3  main       -> main
+ DEBUG [10a3fcd8] 	
+  INFO [10a3fcd8] Finished in 3.695 seconds with exit status 0 (successful).
+ DEBUG [71cada02] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [71cada02] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [71cada02] Finished in 0.681 seconds with exit status 0 (successful).
+  INFO [9169b2e7] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055046 as deploy@13.208.249.189
+ DEBUG [9169b2e7] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5330ffee34909492d30e.sh" ; /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055046 )
+  INFO [9169b2e7] Finished in 0.815 seconds with exit status 0 (successful).
+  INFO [8e7bb74f] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220324055046 as deploy@13.208.249.189
+ DEBUG [8e7bb74f] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5330ffee34909492d30e.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220324055046 )
+  INFO [8e7bb74f] Finished in 2.558 seconds with exit status 0 (successful).
+ DEBUG [8271a873] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [8271a873] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [8271a873] Finished in 0.817 seconds with exit status 0 (successful).
+ DEBUG [7d8f1e76] Running /usr/bin/env git rev-list --max-count=1 main as deploy@13.208.249.189
+ DEBUG [7d8f1e76] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5330ffee34909492d30e.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [7d8f1e76] 	f1be1d3cf018fe578059b51c4b35a3ba5ba9c113
+ DEBUG [7d8f1e76] 	
+ DEBUG [7d8f1e76] Finished in 0.884 seconds with exit status 0 (successful).
+ DEBUG [14474849] Running if test ! -d /home/deploy/health_blog/releases/20220324055046; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055046'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [14474849] Command: if test ! -d /home/deploy/health_blog/releases/20220324055046; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055046'" 1>&2; false; fi
+ DEBUG [14474849] Finished in 0.648 seconds with exit status 0 (successful).
+  INFO [9c5667de] Running /usr/bin/env echo "f1be1d3cf018fe578059b51c4b35a3ba5ba9c113" > REVISION as deploy@13.208.249.189
+ DEBUG [9c5667de] Command: cd /home/deploy/health_blog/releases/20220324055046 && /usr/bin/env echo "f1be1d3cf018fe578059b51c4b35a3ba5ba9c113" > REVISION
+  INFO [9c5667de] Finished in 0.712 seconds with exit status 0 (successful).
+  INFO [da0ba2be] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055046/config as deploy@13.208.249.189
+ DEBUG [da0ba2be] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055046/config
+  INFO [da0ba2be] Finished in 0.623 seconds with exit status 0 (successful).
+ DEBUG [c8b86c2c] Running [ -L /home/deploy/health_blog/releases/20220324055046/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [c8b86c2c] Command: [ -L /home/deploy/health_blog/releases/20220324055046/config/database.yml ]
+ DEBUG [c8b86c2c] Finished in 0.663 seconds with exit status 1 (failed).
+ DEBUG [6b027611] Running [ -f /home/deploy/health_blog/releases/20220324055046/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [6b027611] Command: [ -f /home/deploy/health_blog/releases/20220324055046/config/database.yml ]
+ DEBUG [6b027611] Finished in 0.628 seconds with exit status 0 (successful).
+  INFO [c2600bf8] Running /usr/bin/env rm /home/deploy/health_blog/releases/20220324055046/config/database.yml as deploy@13.208.249.189
+ DEBUG [c2600bf8] Command: /usr/bin/env rm /home/deploy/health_blog/releases/20220324055046/config/database.yml
+  INFO [c2600bf8] Finished in 0.675 seconds with exit status 0 (successful).
+  INFO [22038d67] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/config/database.yml /home/deploy/health_blog/releases/20220324055046/config/database.yml as deploy@13.208.249.189
+ DEBUG [22038d67] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/config/database.yml /home/deploy/health_blog/releases/20220324055046/config/database.yml
+  INFO [22038d67] Finished in 0.645 seconds with exit status 0 (successful).
+ DEBUG [6c8f8103] Running [ -L /home/deploy/health_blog/releases/20220324055046/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [6c8f8103] Command: [ -L /home/deploy/health_blog/releases/20220324055046/config/application.yml ]
+ DEBUG [6c8f8103] Finished in 1.154 seconds with exit status 1 (failed).
+ DEBUG [04eadca0] Running [ -f /home/deploy/health_blog/releases/20220324055046/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [04eadca0] Command: [ -f /home/deploy/health_blog/releases/20220324055046/config/application.yml ]
+ DEBUG [04eadca0] Finished in 0.833 seconds with exit status 1 (failed).
+  INFO [e0012a2f] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/config/application.yml /home/deploy/health_blog/releases/20220324055046/config/application.yml as deploy@13.208.249.189
+ DEBUG [e0012a2f] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/config/application.yml /home/deploy/health_blog/releases/20220324055046/config/application.yml
+  INFO [e0012a2f] Finished in 0.681 seconds with exit status 0 (successful).
+  INFO [25959087] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055046 /home/deploy/health_blog/releases/20220324055046/tmp /home/deploy/health_blog/releases/20220324055046/vendor /home/deploy/health_blog/releases/20220324055046/public as deploy@13.208.249.189
+ DEBUG [25959087] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055046 /home/deploy/health_blog/releases/20220324055046/tmp /home/deploy/health_blog/releases/20220324055046/vendor /home/deploy/health_blog/releases/20220324055046/public
+  INFO [25959087] Finished in 0.629 seconds with exit status 0 (successful).
+ DEBUG [f7ec6766] Running [ -L /home/deploy/health_blog/releases/20220324055046/bin ] as deploy@13.208.249.189
+ DEBUG [f7ec6766] Command: [ -L /home/deploy/health_blog/releases/20220324055046/bin ]
+ DEBUG [f7ec6766] Finished in 0.660 seconds with exit status 1 (failed).
+ DEBUG [6908fbaf] Running [ -d /home/deploy/health_blog/releases/20220324055046/bin ] as deploy@13.208.249.189
+ DEBUG [6908fbaf] Command: [ -d /home/deploy/health_blog/releases/20220324055046/bin ]
+ DEBUG [6908fbaf] Finished in 0.648 seconds with exit status 0 (successful).
+  INFO [2bbeb8e5] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055046/bin as deploy@13.208.249.189
+ DEBUG [2bbeb8e5] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055046/bin
+  INFO [2bbeb8e5] Finished in 0.678 seconds with exit status 0 (successful).
+  INFO [daa4a145] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/bin /home/deploy/health_blog/releases/20220324055046/bin as deploy@13.208.249.189
+ DEBUG [daa4a145] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/bin /home/deploy/health_blog/releases/20220324055046/bin
+  INFO [daa4a145] Finished in 0.993 seconds with exit status 0 (successful).
+ DEBUG [c4f8cacd] Running [ -L /home/deploy/health_blog/releases/20220324055046/log ] as deploy@13.208.249.189
+ DEBUG [c4f8cacd] Command: [ -L /home/deploy/health_blog/releases/20220324055046/log ]
+ DEBUG [c4f8cacd] Finished in 0.899 seconds with exit status 1 (failed).
+ DEBUG [740b738d] Running [ -d /home/deploy/health_blog/releases/20220324055046/log ] as deploy@13.208.249.189
+ DEBUG [740b738d] Command: [ -d /home/deploy/health_blog/releases/20220324055046/log ]
+ DEBUG [740b738d] Finished in 0.755 seconds with exit status 0 (successful).
+  INFO [2915f6eb] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055046/log as deploy@13.208.249.189
+ DEBUG [2915f6eb] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055046/log
+  INFO [2915f6eb] Finished in 1.007 seconds with exit status 0 (successful).
+  INFO [d0124786] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/log /home/deploy/health_blog/releases/20220324055046/log as deploy@13.208.249.189
+ DEBUG [d0124786] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/log /home/deploy/health_blog/releases/20220324055046/log
+  INFO [d0124786] Finished in 0.632 seconds with exit status 0 (successful).
+ DEBUG [cbf42386] Running [ -L /home/deploy/health_blog/releases/20220324055046/tmp/pids ] as deploy@13.208.249.189
+ DEBUG [cbf42386] Command: [ -L /home/deploy/health_blog/releases/20220324055046/tmp/pids ]
+ DEBUG [cbf42386] Finished in 0.664 seconds with exit status 1 (failed).
+ DEBUG [fac77cda] Running [ -d /home/deploy/health_blog/releases/20220324055046/tmp/pids ] as deploy@13.208.249.189
+ DEBUG [fac77cda] Command: [ -d /home/deploy/health_blog/releases/20220324055046/tmp/pids ]
+ DEBUG [fac77cda] Finished in 0.661 seconds with exit status 0 (successful).
+  INFO [bd686491] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055046/tmp/pids as deploy@13.208.249.189
+ DEBUG [bd686491] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055046/tmp/pids
+  INFO [bd686491] Finished in 0.677 seconds with exit status 0 (successful).
+  INFO [2cec0097] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/releases/20220324055046/tmp/pids as deploy@13.208.249.189
+ DEBUG [2cec0097] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/releases/20220324055046/tmp/pids
+  INFO [2cec0097] Finished in 0.645 seconds with exit status 0 (successful).
+ DEBUG [98cd0cc6] Running [ -L /home/deploy/health_blog/releases/20220324055046/tmp/cache ] as deploy@13.208.249.189
+ DEBUG [98cd0cc6] Command: [ -L /home/deploy/health_blog/releases/20220324055046/tmp/cache ]
+ DEBUG [98cd0cc6] Finished in 0.677 seconds with exit status 1 (failed).
+ DEBUG [5274bac5] Running [ -d /home/deploy/health_blog/releases/20220324055046/tmp/cache ] as deploy@13.208.249.189
+ DEBUG [5274bac5] Command: [ -d /home/deploy/health_blog/releases/20220324055046/tmp/cache ]
+ DEBUG [5274bac5] Finished in 0.632 seconds with exit status 0 (successful).
+  INFO [a5a4f06e] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055046/tmp/cache as deploy@13.208.249.189
+ DEBUG [a5a4f06e] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055046/tmp/cache
+  INFO [a5a4f06e] Finished in 0.711 seconds with exit status 0 (successful).
+  INFO [496af803] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/releases/20220324055046/tmp/cache as deploy@13.208.249.189
+ DEBUG [496af803] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/releases/20220324055046/tmp/cache
+  INFO [496af803] Finished in 0.629 seconds with exit status 0 (successful).
+ DEBUG [66261bea] Running [ -L /home/deploy/health_blog/releases/20220324055046/tmp/sockets ] as deploy@13.208.249.189
+ DEBUG [66261bea] Command: [ -L /home/deploy/health_blog/releases/20220324055046/tmp/sockets ]
+ DEBUG [66261bea] Finished in 0.723 seconds with exit status 1 (failed).
+ DEBUG [0b351d55] Running [ -d /home/deploy/health_blog/releases/20220324055046/tmp/sockets ] as deploy@13.208.249.189
+ DEBUG [0b351d55] Command: [ -d /home/deploy/health_blog/releases/20220324055046/tmp/sockets ]
+ DEBUG [0b351d55] Finished in 0.656 seconds with exit status 1 (failed).
+  INFO [414eeb60] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/releases/20220324055046/tmp/sockets as deploy@13.208.249.189
+ DEBUG [414eeb60] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/releases/20220324055046/tmp/sockets
+  INFO [414eeb60] Finished in 0.675 seconds with exit status 0 (successful).
+ DEBUG [ae19f072] Running [ -L /home/deploy/health_blog/releases/20220324055046/vendor/bundle ] as deploy@13.208.249.189
+ DEBUG [ae19f072] Command: [ -L /home/deploy/health_blog/releases/20220324055046/vendor/bundle ]
+ DEBUG [ae19f072] Finished in 0.629 seconds with exit status 1 (failed).
+ DEBUG [673c97c5] Running [ -d /home/deploy/health_blog/releases/20220324055046/vendor/bundle ] as deploy@13.208.249.189
+ DEBUG [673c97c5] Command: [ -d /home/deploy/health_blog/releases/20220324055046/vendor/bundle ]
+ DEBUG [673c97c5] Finished in 0.662 seconds with exit status 0 (successful).
+  INFO [d4dbd8e2] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055046/vendor/bundle as deploy@13.208.249.189
+ DEBUG [d4dbd8e2] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055046/vendor/bundle
+  INFO [d4dbd8e2] Finished in 0.784 seconds with exit status 0 (successful).
+  INFO [b058b279] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/releases/20220324055046/vendor/bundle as deploy@13.208.249.189
+ DEBUG [b058b279] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/releases/20220324055046/vendor/bundle
+  INFO [b058b279] Finished in 0.695 seconds with exit status 0 (successful).
+ DEBUG [b934e0a7] Running [ -L /home/deploy/health_blog/releases/20220324055046/public/system ] as deploy@13.208.249.189
+ DEBUG [b934e0a7] Command: [ -L /home/deploy/health_blog/releases/20220324055046/public/system ]
+ DEBUG [b934e0a7] Finished in 0.645 seconds with exit status 1 (failed).
+ DEBUG [4f9a71fa] Running [ -d /home/deploy/health_blog/releases/20220324055046/public/system ] as deploy@13.208.249.189
+ DEBUG [4f9a71fa] Command: [ -d /home/deploy/health_blog/releases/20220324055046/public/system ]
+ DEBUG [4f9a71fa] Finished in 0.679 seconds with exit status 1 (failed).
+  INFO [378f40f9] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/releases/20220324055046/public/system as deploy@13.208.249.189
+ DEBUG [378f40f9] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/releases/20220324055046/public/system
+  INFO [378f40f9] Finished in 0.648 seconds with exit status 0 (successful).
+ DEBUG [188dc2b3] Running [ -L /home/deploy/health_blog/releases/20220324055046/public/uploads ] as deploy@13.208.249.189
+ DEBUG [188dc2b3] Command: [ -L /home/deploy/health_blog/releases/20220324055046/public/uploads ]
+ DEBUG [188dc2b3] Finished in 0.680 seconds with exit status 1 (failed).
+ DEBUG [33dac8c8] Running [ -d /home/deploy/health_blog/releases/20220324055046/public/uploads ] as deploy@13.208.249.189
+ DEBUG [33dac8c8] Command: [ -d /home/deploy/health_blog/releases/20220324055046/public/uploads ]
+ DEBUG [33dac8c8] Finished in 0.659 seconds with exit status 1 (failed).
+  INFO [003a72fa] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/releases/20220324055046/public/uploads as deploy@13.208.249.189
+ DEBUG [003a72fa] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/releases/20220324055046/public/uploads
+  INFO [003a72fa] Finished in 0.688 seconds with exit status 0 (successful).
+ DEBUG [0deaf03d] Running [ -L /home/deploy/health_blog/releases/20220324055046/public/assets ] as deploy@13.208.249.189
+ DEBUG [0deaf03d] Command: [ -L /home/deploy/health_blog/releases/20220324055046/public/assets ]
+ DEBUG [0deaf03d] Finished in 0.632 seconds with exit status 1 (failed).
+ DEBUG [604948fe] Running [ -d /home/deploy/health_blog/releases/20220324055046/public/assets ] as deploy@13.208.249.189
+ DEBUG [604948fe] Command: [ -d /home/deploy/health_blog/releases/20220324055046/public/assets ]
+ DEBUG [604948fe] Finished in 0.696 seconds with exit status 1 (failed).
+  INFO [ec2e0125] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/assets /home/deploy/health_blog/releases/20220324055046/public/assets as deploy@13.208.249.189
+ DEBUG [ec2e0125] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/assets /home/deploy/health_blog/releases/20220324055046/public/assets
+  INFO [ec2e0125] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [6f9eac79] Running if test ! -d /home/deploy/health_blog/releases/20220324055046; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055046'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [6f9eac79] Command: if test ! -d /home/deploy/health_blog/releases/20220324055046; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055046'" 1>&2; false; fi
+ DEBUG [6f9eac79] Finished in 1.130 seconds with exit status 0 (successful).
+  INFO [27f332d0] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local deployment true as deploy@13.208.249.189
+ DEBUG [27f332d0] Command: cd /home/deploy/health_blog/releases/20220324055046 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local deployment true
+  INFO [27f332d0] Finished in 1.213 seconds with exit status 0 (successful).
+  INFO [6a9e3297] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local path /home/deploy/health_blog/shared/bundle as deploy@13.208.249.189
+ DEBUG [6a9e3297] Command: cd /home/deploy/health_blog/releases/20220324055046 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local path /home/deploy/health_blog/shared/bundle
+ DEBUG [6a9e3297] 	You are replacing the current local value of path, which is currently "vendor/bundle"
+ DEBUG [6a9e3297] 	
+  INFO [6a9e3297] Finished in 1.213 seconds with exit status 0 (successful).
+  INFO [4118b6eb] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local without development:test as deploy@13.208.249.189
+ DEBUG [4118b6eb] Command: cd /home/deploy/health_blog/releases/20220324055046 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local without development:test
+  INFO [4118b6eb] Finished in 1.030 seconds with exit status 0 (successful).
+ DEBUG [cabcc9e1] Running if test ! -d /home/deploy/health_blog/releases/20220324055046; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055046'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [cabcc9e1] Command: if test ! -d /home/deploy/health_blog/releases/20220324055046; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055046'" 1>&2; false; fi
+ DEBUG [cabcc9e1] Finished in 0.504 seconds with exit status 0 (successful).
+ DEBUG [3dcd82ef] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle check as deploy@13.208.249.189
+ DEBUG [3dcd82ef] Command: cd /home/deploy/health_blog/releases/20220324055046 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle check
+ DEBUG [3dcd82ef] 	[31mThe following gems are missing[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * rake (13.0.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * concurrent-ruby (1.1.9)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * i18n (1.8.10)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * minitest (5.14.4)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * thread_safe (0.3.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * tzinfo (1.2.9)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * activesupport (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * builder (3.2.4)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * erubi (1.10.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * rails-dom-testing (2.0.3)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * crass (1.0.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * loofah (2.12.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * rails-html-sanitizer (1.4.2)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * actionview (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * rack (2.2.3)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * rack-test (1.1.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * actionpack (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * nio4r (2.5.8)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * websocket-extensions (0.1.5)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * websocket-driver (0.7.5)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * actioncable (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * globalid (0.5.2)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * activejob (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * mini_mime (1.1.1)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * mail (2.7.1)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * actionmailer (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * activemodel (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * arel (9.0.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * activerecord (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * marcel (1.0.1)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * activestorage (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * msgpack (1.4.2)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * bootsnap (1.8.1)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * execjs (2.8.1)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * method_source (1.0.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * thor (1.1.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * railties (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * coffee-rails (4.2.2)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * duktape (2.6.0.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * ed25519 (1.3.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * figaro (1.2.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * jbuilder (2.11.2)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * puma (3.12.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * sprockets (3.7.2)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * sprockets-rails (3.2.2)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * rails (5.2.6)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * rb-fsevent (0.11.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * sass-listen (4.0.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * sass (3.7.4)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * tilt (2.0.10)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * sass-rails (5.1.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * sqlite3 (1.4.2)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * turbolinks-source (5.2.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * turbolinks (5.2.1)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * uglifier (4.2.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[31m * webrick (1.7.0)[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [3dcd82ef] 	
+ DEBUG [3dcd82ef] Finished in 1.683 seconds with exit status 1 (failed).
+  INFO [3af0090a] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle install --jobs 4 --quiet as deploy@13.208.249.189
+ DEBUG [3af0090a] Command: cd /home/deploy/health_blog/releases/20220324055046 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle install --jobs 4 --quiet
+ DEBUG [3af0090a] 	[31mUnable to find a spec satisfying bcrypt_pbkdf (>= 1.0, < 2.0) in the set.
+ DEBUG [3af0090a] 	
+ DEBUG [3af0090a] 	Perhaps the lockfile is corrupted? Found bcrypt_pbkdf (1.1.0-x64-mingw32) that
+ DEBUG [3af0090a] 	
+did not match the current platform.[0m
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 11:29:04 +0530 cap deploy production
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c0f38499] Running ~/.rvm/bin/rvm version as deploy@13.208.249.189
+ DEBUG [c0f38499] Command: ~/.rvm/bin/rvm version
+ DEBUG [c0f38499] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [c0f38499] 	
+ DEBUG [c0f38499] Finished in 2.484 seconds with exit status 0 (successful).
+ DEBUG [c72ac2f1] Running ~/.rvm/bin/rvm current as deploy@13.208.249.189
+ DEBUG [c72ac2f1] Command: ~/.rvm/bin/rvm current
+ DEBUG [c72ac2f1] 	system
+ DEBUG [c72ac2f1] 	
+ DEBUG [c72ac2f1] Finished in 0.660 seconds with exit status 0 (successful).
+ DEBUG [43cad6a0] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.249.189
+ DEBUG [43cad6a0] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [43cad6a0] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [43cad6a0] 	
+ DEBUG [43cad6a0] Finished in 0.980 seconds with exit status 0 (successful).
+  INFO [c174e354] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.249.189
+ DEBUG [c174e354] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c174e354] Finished in 0.495 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-c4b24b7172d82088fb1f.sh 0.0%
+  INFO Uploading /tmp/git-ssh-c4b24b7172d82088fb1f.sh 100.0%
+  INFO [f03b9f7f] Running /usr/bin/env chmod 700 /tmp/git-ssh-c4b24b7172d82088fb1f.sh as deploy@13.208.249.189
+ DEBUG [f03b9f7f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-c4b24b7172d82088fb1f.sh
+  INFO [f03b9f7f] Finished in 0.535 seconds with exit status 0 (successful).
+  INFO [c2620e86] Running /usr/bin/env git ls-remote https://github.com/TarunWAL/health_blog.git HEAD as deploy@13.208.249.189
+ DEBUG [c2620e86] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c4b24b7172d82088fb1f.sh" ; /usr/bin/env git ls-remote https://github.com/TarunWAL/health_blog.git HEAD )
+ DEBUG [c2620e86] 	f1be1d3cf018fe578059b51c4b35a3ba5ba9c113
+ DEBUG [c2620e86] 		HEAD
+ DEBUG [c2620e86] 	
+  INFO [c2620e86] Finished in 0.851 seconds with exit status 0 (successful).
+  INFO [a9fb42a8] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases as deploy@13.208.249.189
+ DEBUG [a9fb42a8] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases
+  INFO [a9fb42a8] Finished in 0.432 seconds with exit status 0 (successful).
+  INFO [8cfdf904] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets as deploy@13.208.249.189
+ DEBUG [8cfdf904] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets
+  INFO [8cfdf904] Finished in 0.485 seconds with exit status 0 (successful).
+  INFO [cf8a7133] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config as deploy@13.208.249.189
+ DEBUG [cf8a7133] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config
+  INFO [cf8a7133] Finished in 0.441 seconds with exit status 0 (successful).
+ DEBUG [15fb0ef6] Running [ -f /home/deploy/health_blog/shared/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [15fb0ef6] Command: [ -f /home/deploy/health_blog/shared/config/database.yml ]
+ DEBUG [15fb0ef6] Finished in 0.643 seconds with exit status 0 (successful).
+ DEBUG [2ea2339b] Running [ -f /home/deploy/health_blog/shared/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [2ea2339b] Command: [ -f /home/deploy/health_blog/shared/config/application.yml ]
+ DEBUG [2ea2339b] Finished in 0.506 seconds with exit status 0 (successful).
+ DEBUG [1284dc92] Running [ -f /home/deploy/health_blog/current/REVISION ] as deploy@13.208.249.189
+ DEBUG [1284dc92] Command: [ -f /home/deploy/health_blog/current/REVISION ]
+ DEBUG [1284dc92] Finished in 0.488 seconds with exit status 1 (failed).
+ DEBUG [8fa10beb] Running [ -f /home/deploy/health_blog/repo/HEAD ] as deploy@13.208.249.189
+ DEBUG [8fa10beb] Command: [ -f /home/deploy/health_blog/repo/HEAD ]
+ DEBUG [8fa10beb] Finished in 0.455 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/health_blog/repo
+ DEBUG [e526c982] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [e526c982] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [e526c982] Finished in 0.514 seconds with exit status 0 (successful).
+  INFO [fb8374bd] Running /usr/bin/env git remote set-url origin https://github.com/TarunWAL/health_blog.git as deploy@13.208.249.189
+ DEBUG [fb8374bd] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c4b24b7172d82088fb1f.sh" ; /usr/bin/env git remote set-url origin https://github.com/TarunWAL/health_blog.git )
+  INFO [fb8374bd] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO [22d83d39] Running /usr/bin/env git remote update --prune as deploy@13.208.249.189
+ DEBUG [22d83d39] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c4b24b7172d82088fb1f.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [22d83d39] 	Fetching origin
+ DEBUG [22d83d39] 	
+  INFO [22d83d39] Finished in 0.755 seconds with exit status 0 (successful).
+ DEBUG [42050fba] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [42050fba] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [42050fba] Finished in 0.437 seconds with exit status 0 (successful).
+  INFO [cb36f238] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055914 as deploy@13.208.249.189
+ DEBUG [cb36f238] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c4b24b7172d82088fb1f.sh" ; /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055914 )
+  INFO [cb36f238] Finished in 0.487 seconds with exit status 0 (successful).
+  INFO [77e662b1] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220324055914 as deploy@13.208.249.189
+ DEBUG [77e662b1] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c4b24b7172d82088fb1f.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220324055914 )
+  INFO [77e662b1] Finished in 1.397 seconds with exit status 0 (successful).
+ DEBUG [143497c6] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [143497c6] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [143497c6] Finished in 0.485 seconds with exit status 0 (successful).
+ DEBUG [a618dc30] Running /usr/bin/env git rev-list --max-count=1 main as deploy@13.208.249.189
+ DEBUG [a618dc30] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c4b24b7172d82088fb1f.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [a618dc30] 	f1be1d3cf018fe578059b51c4b35a3ba5ba9c113
+ DEBUG [a618dc30] 	
+ DEBUG [a618dc30] Finished in 0.476 seconds with exit status 0 (successful).
+ DEBUG [d15a8cdb] Running if test ! -d /home/deploy/health_blog/releases/20220324055914; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055914'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [d15a8cdb] Command: if test ! -d /home/deploy/health_blog/releases/20220324055914; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055914'" 1>&2; false; fi
+ DEBUG [d15a8cdb] Finished in 0.502 seconds with exit status 0 (successful).
+  INFO [9bcfdcf8] Running /usr/bin/env echo "f1be1d3cf018fe578059b51c4b35a3ba5ba9c113" > REVISION as deploy@13.208.249.189
+ DEBUG [9bcfdcf8] Command: cd /home/deploy/health_blog/releases/20220324055914 && /usr/bin/env echo "f1be1d3cf018fe578059b51c4b35a3ba5ba9c113" > REVISION
+  INFO [9bcfdcf8] Finished in 0.456 seconds with exit status 0 (successful).
+  INFO [2b0ac9f4] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055914/config as deploy@13.208.249.189
+ DEBUG [2b0ac9f4] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055914/config
+  INFO [2b0ac9f4] Finished in 0.483 seconds with exit status 0 (successful).
+ DEBUG [53a2d575] Running [ -L /home/deploy/health_blog/releases/20220324055914/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [53a2d575] Command: [ -L /home/deploy/health_blog/releases/20220324055914/config/database.yml ]
+ DEBUG [53a2d575] Finished in 0.473 seconds with exit status 1 (failed).
+ DEBUG [92dbe144] Running [ -f /home/deploy/health_blog/releases/20220324055914/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [92dbe144] Command: [ -f /home/deploy/health_blog/releases/20220324055914/config/database.yml ]
+ DEBUG [92dbe144] Finished in 0.488 seconds with exit status 0 (successful).
+  INFO [7518b96d] Running /usr/bin/env rm /home/deploy/health_blog/releases/20220324055914/config/database.yml as deploy@13.208.249.189
+ DEBUG [7518b96d] Command: /usr/bin/env rm /home/deploy/health_blog/releases/20220324055914/config/database.yml
+  INFO [7518b96d] Finished in 0.452 seconds with exit status 0 (successful).
+  INFO [422252a8] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/config/database.yml /home/deploy/health_blog/releases/20220324055914/config/database.yml as deploy@13.208.249.189
+ DEBUG [422252a8] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/config/database.yml /home/deploy/health_blog/releases/20220324055914/config/database.yml
+  INFO [422252a8] Finished in 0.486 seconds with exit status 0 (successful).
+ DEBUG [66ecfe1d] Running [ -L /home/deploy/health_blog/releases/20220324055914/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [66ecfe1d] Command: [ -L /home/deploy/health_blog/releases/20220324055914/config/application.yml ]
+ DEBUG [66ecfe1d] Finished in 0.441 seconds with exit status 1 (failed).
+ DEBUG [5ec35584] Running [ -f /home/deploy/health_blog/releases/20220324055914/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [5ec35584] Command: [ -f /home/deploy/health_blog/releases/20220324055914/config/application.yml ]
+ DEBUG [5ec35584] Finished in 0.489 seconds with exit status 1 (failed).
+  INFO [d1aa2908] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/config/application.yml /home/deploy/health_blog/releases/20220324055914/config/application.yml as deploy@13.208.249.189
+ DEBUG [d1aa2908] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/config/application.yml /home/deploy/health_blog/releases/20220324055914/config/application.yml
+  INFO [d1aa2908] Finished in 0.500 seconds with exit status 0 (successful).
+  INFO [c2b2c21a] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055914 /home/deploy/health_blog/releases/20220324055914/tmp /home/deploy/health_blog/releases/20220324055914/vendor /home/deploy/health_blog/releases/20220324055914/public as deploy@13.208.249.189
+ DEBUG [c2b2c21a] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324055914 /home/deploy/health_blog/releases/20220324055914/tmp /home/deploy/health_blog/releases/20220324055914/vendor /home/deploy/health_blog/releases/20220324055914/public
+  INFO [c2b2c21a] Finished in 0.486 seconds with exit status 0 (successful).
+ DEBUG [44e4c88b] Running [ -L /home/deploy/health_blog/releases/20220324055914/bin ] as deploy@13.208.249.189
+ DEBUG [44e4c88b] Command: [ -L /home/deploy/health_blog/releases/20220324055914/bin ]
+ DEBUG [44e4c88b] Finished in 0.456 seconds with exit status 1 (failed).
+ DEBUG [2b33fa8b] Running [ -d /home/deploy/health_blog/releases/20220324055914/bin ] as deploy@13.208.249.189
+ DEBUG [2b33fa8b] Command: [ -d /home/deploy/health_blog/releases/20220324055914/bin ]
+ DEBUG [2b33fa8b] Finished in 0.484 seconds with exit status 0 (successful).
+  INFO [8f8ef9ec] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055914/bin as deploy@13.208.249.189
+ DEBUG [8f8ef9ec] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055914/bin
+  INFO [8f8ef9ec] Finished in 0.440 seconds with exit status 0 (successful).
+  INFO [f45f0c6f] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/bin /home/deploy/health_blog/releases/20220324055914/bin as deploy@13.208.249.189
+ DEBUG [f45f0c6f] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/bin /home/deploy/health_blog/releases/20220324055914/bin
+  INFO [f45f0c6f] Finished in 0.487 seconds with exit status 0 (successful).
+ DEBUG [cf7ae69b] Running [ -L /home/deploy/health_blog/releases/20220324055914/log ] as deploy@13.208.249.189
+ DEBUG [cf7ae69b] Command: [ -L /home/deploy/health_blog/releases/20220324055914/log ]
+ DEBUG [cf7ae69b] Finished in 0.426 seconds with exit status 1 (failed).
+ DEBUG [c66d26f6] Running [ -d /home/deploy/health_blog/releases/20220324055914/log ] as deploy@13.208.249.189
+ DEBUG [c66d26f6] Command: [ -d /home/deploy/health_blog/releases/20220324055914/log ]
+ DEBUG [c66d26f6] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [11b3f8e7] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055914/log as deploy@13.208.249.189
+ DEBUG [11b3f8e7] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055914/log
+  INFO [11b3f8e7] Finished in 0.424 seconds with exit status 0 (successful).
+  INFO [98a6ed89] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/log /home/deploy/health_blog/releases/20220324055914/log as deploy@13.208.249.189
+ DEBUG [98a6ed89] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/log /home/deploy/health_blog/releases/20220324055914/log
+  INFO [98a6ed89] Finished in 0.470 seconds with exit status 0 (successful).
+ DEBUG [c77e6290] Running [ -L /home/deploy/health_blog/releases/20220324055914/tmp/pids ] as deploy@13.208.249.189
+ DEBUG [c77e6290] Command: [ -L /home/deploy/health_blog/releases/20220324055914/tmp/pids ]
+ DEBUG [c77e6290] Finished in 0.440 seconds with exit status 1 (failed).
+ DEBUG [488e42a4] Running [ -d /home/deploy/health_blog/releases/20220324055914/tmp/pids ] as deploy@13.208.249.189
+ DEBUG [488e42a4] Command: [ -d /home/deploy/health_blog/releases/20220324055914/tmp/pids ]
+ DEBUG [488e42a4] Finished in 0.488 seconds with exit status 0 (successful).
+  INFO [a43ae5df] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055914/tmp/pids as deploy@13.208.249.189
+ DEBUG [a43ae5df] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055914/tmp/pids
+  INFO [a43ae5df] Finished in 0.503 seconds with exit status 0 (successful).
+  INFO [cc0b0e7e] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/releases/20220324055914/tmp/pids as deploy@13.208.249.189
+ DEBUG [cc0b0e7e] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/releases/20220324055914/tmp/pids
+  INFO [cc0b0e7e] Finished in 0.482 seconds with exit status 0 (successful).
+ DEBUG [a9901759] Running [ -L /home/deploy/health_blog/releases/20220324055914/tmp/cache ] as deploy@13.208.249.189
+ DEBUG [a9901759] Command: [ -L /home/deploy/health_blog/releases/20220324055914/tmp/cache ]
+ DEBUG [a9901759] Finished in 0.454 seconds with exit status 1 (failed).
+ DEBUG [cf99ad94] Running [ -d /home/deploy/health_blog/releases/20220324055914/tmp/cache ] as deploy@13.208.249.189
+ DEBUG [cf99ad94] Command: [ -d /home/deploy/health_blog/releases/20220324055914/tmp/cache ]
+ DEBUG [cf99ad94] Finished in 0.678 seconds with exit status 0 (successful).
+  INFO [40d108e8] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055914/tmp/cache as deploy@13.208.249.189
+ DEBUG [40d108e8] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055914/tmp/cache
+  INFO [40d108e8] Finished in 0.534 seconds with exit status 0 (successful).
+  INFO [05999828] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/releases/20220324055914/tmp/cache as deploy@13.208.249.189
+ DEBUG [05999828] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/releases/20220324055914/tmp/cache
+  INFO [05999828] Finished in 0.441 seconds with exit status 0 (successful).
+ DEBUG [ed4d8c2c] Running [ -L /home/deploy/health_blog/releases/20220324055914/tmp/sockets ] as deploy@13.208.249.189
+ DEBUG [ed4d8c2c] Command: [ -L /home/deploy/health_blog/releases/20220324055914/tmp/sockets ]
+ DEBUG [ed4d8c2c] Finished in 0.533 seconds with exit status 1 (failed).
+ DEBUG [aa0690f3] Running [ -d /home/deploy/health_blog/releases/20220324055914/tmp/sockets ] as deploy@13.208.249.189
+ DEBUG [aa0690f3] Command: [ -d /home/deploy/health_blog/releases/20220324055914/tmp/sockets ]
+ DEBUG [aa0690f3] Finished in 0.460 seconds with exit status 1 (failed).
+  INFO [ddaa75e2] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/releases/20220324055914/tmp/sockets as deploy@13.208.249.189
+ DEBUG [ddaa75e2] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/releases/20220324055914/tmp/sockets
+  INFO [ddaa75e2] Finished in 0.490 seconds with exit status 0 (successful).
+ DEBUG [307c4b9e] Running [ -L /home/deploy/health_blog/releases/20220324055914/vendor/bundle ] as deploy@13.208.249.189
+ DEBUG [307c4b9e] Command: [ -L /home/deploy/health_blog/releases/20220324055914/vendor/bundle ]
+ DEBUG [307c4b9e] Finished in 0.426 seconds with exit status 1 (failed).
+ DEBUG [a6bf05f5] Running [ -d /home/deploy/health_blog/releases/20220324055914/vendor/bundle ] as deploy@13.208.249.189
+ DEBUG [a6bf05f5] Command: [ -d /home/deploy/health_blog/releases/20220324055914/vendor/bundle ]
+ DEBUG [a6bf05f5] Finished in 0.471 seconds with exit status 0 (successful).
+  INFO [3a43361c] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055914/vendor/bundle as deploy@13.208.249.189
+ DEBUG [3a43361c] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324055914/vendor/bundle
+  INFO [3a43361c] Finished in 0.581 seconds with exit status 0 (successful).
+  INFO [e07d8a6e] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/releases/20220324055914/vendor/bundle as deploy@13.208.249.189
+ DEBUG [e07d8a6e] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/releases/20220324055914/vendor/bundle
+  INFO [e07d8a6e] Finished in 0.503 seconds with exit status 0 (successful).
+ DEBUG [4d70be93] Running [ -L /home/deploy/health_blog/releases/20220324055914/public/system ] as deploy@13.208.249.189
+ DEBUG [4d70be93] Command: [ -L /home/deploy/health_blog/releases/20220324055914/public/system ]
+ DEBUG [4d70be93] Finished in 0.440 seconds with exit status 1 (failed).
+ DEBUG [b7d1ae00] Running [ -d /home/deploy/health_blog/releases/20220324055914/public/system ] as deploy@13.208.249.189
+ DEBUG [b7d1ae00] Command: [ -d /home/deploy/health_blog/releases/20220324055914/public/system ]
+ DEBUG [b7d1ae00] Finished in 0.519 seconds with exit status 1 (failed).
+  INFO [257bd7c1] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/releases/20220324055914/public/system as deploy@13.208.249.189
+ DEBUG [257bd7c1] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/releases/20220324055914/public/system
+  INFO [257bd7c1] Finished in 0.438 seconds with exit status 0 (successful).
+ DEBUG [0c0afb95] Running [ -L /home/deploy/health_blog/releases/20220324055914/public/uploads ] as deploy@13.208.249.189
+ DEBUG [0c0afb95] Command: [ -L /home/deploy/health_blog/releases/20220324055914/public/uploads ]
+ DEBUG [0c0afb95] Finished in 0.489 seconds with exit status 1 (failed).
+ DEBUG [c0780237] Running [ -d /home/deploy/health_blog/releases/20220324055914/public/uploads ] as deploy@13.208.249.189
+ DEBUG [c0780237] Command: [ -d /home/deploy/health_blog/releases/20220324055914/public/uploads ]
+ DEBUG [c0780237] Finished in 0.503 seconds with exit status 1 (failed).
+  INFO [efc14096] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/releases/20220324055914/public/uploads as deploy@13.208.249.189
+ DEBUG [efc14096] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/releases/20220324055914/public/uploads
+  INFO [efc14096] Finished in 0.505 seconds with exit status 0 (successful).
+ DEBUG [8dfb8bdf] Running [ -L /home/deploy/health_blog/releases/20220324055914/public/assets ] as deploy@13.208.249.189
+ DEBUG [8dfb8bdf] Command: [ -L /home/deploy/health_blog/releases/20220324055914/public/assets ]
+ DEBUG [8dfb8bdf] Finished in 0.455 seconds with exit status 1 (failed).
+ DEBUG [9a6f3680] Running [ -d /home/deploy/health_blog/releases/20220324055914/public/assets ] as deploy@13.208.249.189
+ DEBUG [9a6f3680] Command: [ -d /home/deploy/health_blog/releases/20220324055914/public/assets ]
+ DEBUG [9a6f3680] Finished in 0.505 seconds with exit status 1 (failed).
+  INFO [05d78229] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/assets /home/deploy/health_blog/releases/20220324055914/public/assets as deploy@13.208.249.189
+ DEBUG [05d78229] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/assets /home/deploy/health_blog/releases/20220324055914/public/assets
+  INFO [05d78229] Finished in 0.442 seconds with exit status 0 (successful).
+ DEBUG [a2047728] Running if test ! -d /home/deploy/health_blog/releases/20220324055914; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055914'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [a2047728] Command: if test ! -d /home/deploy/health_blog/releases/20220324055914; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055914'" 1>&2; false; fi
+ DEBUG [a2047728] Finished in 0.484 seconds with exit status 0 (successful).
+  INFO [e036c16e] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local deployment true as deploy@13.208.249.189
+ DEBUG [e036c16e] Command: cd /home/deploy/health_blog/releases/20220324055914 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local deployment true
+  INFO [e036c16e] Finished in 1.013 seconds with exit status 0 (successful).
+  INFO [8f979c0f] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local path /home/deploy/health_blog/shared/bundle as deploy@13.208.249.189
+ DEBUG [8f979c0f] Command: cd /home/deploy/health_blog/releases/20220324055914 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local path /home/deploy/health_blog/shared/bundle
+ DEBUG [8f979c0f] 	You are replacing the current local value of path, which is currently "vendor/bundle"
+ DEBUG [8f979c0f] 	
+  INFO [8f979c0f] Finished in 1.047 seconds with exit status 0 (successful).
+  INFO [6289bedd] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local without development:test as deploy@13.208.249.189
+ DEBUG [6289bedd] Command: cd /home/deploy/health_blog/releases/20220324055914 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local without development:test
+  INFO [6289bedd] Finished in 1.006 seconds with exit status 0 (successful).
+ DEBUG [fc767fa7] Running if test ! -d /home/deploy/health_blog/releases/20220324055914; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055914'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [fc767fa7] Command: if test ! -d /home/deploy/health_blog/releases/20220324055914; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324055914'" 1>&2; false; fi
+ DEBUG [fc767fa7] Finished in 0.487 seconds with exit status 0 (successful).
+ DEBUG [f96b5228] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle check as deploy@13.208.249.189
+ DEBUG [f96b5228] Command: cd /home/deploy/health_blog/releases/20220324055914 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle check
+ DEBUG [f96b5228] 	[31mThe following gems are missing[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * rake (13.0.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * concurrent-ruby (1.1.9)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * i18n (1.8.10)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * minitest (5.14.4)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * thread_safe (0.3.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * tzinfo (1.2.9)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * activesupport (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * builder (3.2.4)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * erubi (1.10.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * rails-dom-testing (2.0.3)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * crass (1.0.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * loofah (2.12.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * rails-html-sanitizer (1.4.2)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * actionview (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * rack (2.2.3)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * rack-test (1.1.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * actionpack (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * nio4r (2.5.8)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * websocket-extensions (0.1.5)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * websocket-driver (0.7.5)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * actioncable (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * globalid (0.5.2)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * activejob (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * mini_mime (1.1.1)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * mail (2.7.1)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * actionmailer (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * activemodel (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * arel (9.0.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * activerecord (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * marcel (1.0.1)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * activestorage (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * msgpack (1.4.2)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * bootsnap (1.8.1)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * execjs (2.8.1)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * method_source (1.0.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * thor (1.1.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * railties (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * coffee-rails (4.2.2)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * duktape (2.6.0.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * ed25519 (1.3.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * figaro (1.2.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * jbuilder (2.11.2)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * puma (3.12.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * sprockets (3.7.2)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * sprockets-rails (3.2.2)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * rails (5.2.6)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * rb-fsevent (0.11.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * sass-listen (4.0.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * sass (3.7.4)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * tilt (2.0.10)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * sass-rails (5.1.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * sqlite3 (1.4.2)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * turbolinks-source (5.2.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * turbolinks (5.2.1)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * uglifier (4.2.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[31m * webrick (1.7.0)[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [f96b5228] 	
+ DEBUG [f96b5228] Finished in 1.269 seconds with exit status 1 (failed).
+  INFO [4efe23a2] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle install --jobs 4 --quiet as deploy@13.208.249.189
+ DEBUG [4efe23a2] Command: cd /home/deploy/health_blog/releases/20220324055914 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle install --jobs 4 --quiet
+ DEBUG [4efe23a2] 	[31mUnable to find a spec satisfying bcrypt_pbkdf (>= 1.0, < 2.0) in the set.
+ DEBUG [4efe23a2] 	
+ DEBUG [4efe23a2] 	Perhaps the lockfile is corrupted? Found bcrypt_pbkdf (1.1.0-x64-mingw32) that
+ DEBUG [4efe23a2] 	
+did not match the current platform.[0m
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 11:30:26 +0530 cap deploy production
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bf2f2762] Running ~/.rvm/bin/rvm version as deploy@13.208.249.189
+ DEBUG [bf2f2762] Command: ~/.rvm/bin/rvm version
+ DEBUG [bf2f2762] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [bf2f2762] 	
+ DEBUG [bf2f2762] Finished in 2.661 seconds with exit status 0 (successful).
+ DEBUG [cb678d98] Running ~/.rvm/bin/rvm current as deploy@13.208.249.189
+ DEBUG [cb678d98] Command: ~/.rvm/bin/rvm current
+ DEBUG [cb678d98] 	system
+ DEBUG [cb678d98] 	
+ DEBUG [cb678d98] Finished in 0.679 seconds with exit status 0 (successful).
+ DEBUG [e98e7315] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.249.189
+ DEBUG [e98e7315] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [e98e7315] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [e98e7315] 	
+ DEBUG [e98e7315] Finished in 0.948 seconds with exit status 0 (successful).
+  INFO [24ff0686] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.249.189
+ DEBUG [24ff0686] Command: /usr/bin/env mkdir -p /tmp
+  INFO [24ff0686] Finished in 0.497 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-4fddc893918129aa67ec.sh 0.0%
+  INFO Uploading /tmp/git-ssh-4fddc893918129aa67ec.sh 100.0%
+  INFO [a4ccfe52] Running /usr/bin/env chmod 700 /tmp/git-ssh-4fddc893918129aa67ec.sh as deploy@13.208.249.189
+ DEBUG [a4ccfe52] Command: /usr/bin/env chmod 700 /tmp/git-ssh-4fddc893918129aa67ec.sh
+  INFO [a4ccfe52] Finished in 0.586 seconds with exit status 0 (successful).
+  INFO [bf6decd6] Running /usr/bin/env git ls-remote https://github.com/TarunWAL/health_blog.git HEAD as deploy@13.208.249.189
+ DEBUG [bf6decd6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4fddc893918129aa67ec.sh" ; /usr/bin/env git ls-remote https://github.com/TarunWAL/health_blog.git HEAD )
+ DEBUG [bf6decd6] 	f1be1d3cf018fe578059b51c4b35a3ba5ba9c113
+ DEBUG [bf6decd6] 		HEAD
+  INFO [bf6decd6] Finished in 0.866 seconds with exit status 0 (successful).
+  INFO [0c70c509] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases as deploy@13.208.249.189
+ DEBUG [0c70c509] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases
+  INFO [0c70c509] Finished in 0.469 seconds with exit status 0 (successful).
+  INFO [a8f0846c] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets as deploy@13.208.249.189
+ DEBUG [a8f0846c] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets
+  INFO [a8f0846c] Finished in 0.482 seconds with exit status 0 (successful).
+  INFO [e4befc20] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config as deploy@13.208.249.189
+ DEBUG [e4befc20] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config
+  INFO [e4befc20] Finished in 0.438 seconds with exit status 0 (successful).
+ DEBUG [a33d02c1] Running [ -f /home/deploy/health_blog/shared/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [a33d02c1] Command: [ -f /home/deploy/health_blog/shared/config/database.yml ]
+ DEBUG [a33d02c1] Finished in 0.483 seconds with exit status 0 (successful).
+ DEBUG [020f40de] Running [ -f /home/deploy/health_blog/shared/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [020f40de] Command: [ -f /home/deploy/health_blog/shared/config/application.yml ]
+ DEBUG [020f40de] Finished in 0.488 seconds with exit status 0 (successful).
+ DEBUG [844456aa] Running [ -f /home/deploy/health_blog/current/REVISION ] as deploy@13.208.249.189
+ DEBUG [844456aa] Command: [ -f /home/deploy/health_blog/current/REVISION ]
+ DEBUG [844456aa] Finished in 0.485 seconds with exit status 1 (failed).
+ DEBUG [15e9dd09] Running [ -f /home/deploy/health_blog/repo/HEAD ] as deploy@13.208.249.189
+ DEBUG [15e9dd09] Command: [ -f /home/deploy/health_blog/repo/HEAD ]
+ DEBUG [15e9dd09] Finished in 0.470 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/health_blog/repo
+ DEBUG [0f960a7f] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [0f960a7f] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [0f960a7f] Finished in 0.496 seconds with exit status 0 (successful).
+  INFO [75f2c683] Running /usr/bin/env git remote set-url origin https://github.com/TarunWAL/health_blog.git as deploy@13.208.249.189
+ DEBUG [75f2c683] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4fddc893918129aa67ec.sh" ; /usr/bin/env git remote set-url origin https://github.com/TarunWAL/health_blog.git )
+  INFO [75f2c683] Finished in 0.487 seconds with exit status 0 (successful).
+  INFO [76608ba3] Running /usr/bin/env git remote update --prune as deploy@13.208.249.189
+ DEBUG [76608ba3] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4fddc893918129aa67ec.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [76608ba3] 	Fetching origin
+ DEBUG [76608ba3] 	
+  INFO [76608ba3] Finished in 0.807 seconds with exit status 0 (successful).
+ DEBUG [460f5718] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [460f5718] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [460f5718] Finished in 0.455 seconds with exit status 0 (successful).
+  INFO [c6ed1bf4] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324060036 as deploy@13.208.249.189
+ DEBUG [c6ed1bf4] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4fddc893918129aa67ec.sh" ; /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324060036 )
+  INFO [c6ed1bf4] Finished in 0.517 seconds with exit status 0 (successful).
+  INFO [0943bbd8] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220324060036 as deploy@13.208.249.189
+ DEBUG [0943bbd8] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4fddc893918129aa67ec.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220324060036 )
+  INFO [0943bbd8] Finished in 1.401 seconds with exit status 0 (successful).
+ DEBUG [f26c3301] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [f26c3301] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [f26c3301] Finished in 0.564 seconds with exit status 0 (successful).
+ DEBUG [d9f221f4] Running /usr/bin/env git rev-list --max-count=1 main as deploy@13.208.249.189
+ DEBUG [d9f221f4] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4fddc893918129aa67ec.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [d9f221f4] 	f1be1d3cf018fe578059b51c4b35a3ba5ba9c113
+ DEBUG [d9f221f4] 	
+ DEBUG [d9f221f4] Finished in 0.488 seconds with exit status 0 (successful).
+ DEBUG [92030b61] Running if test ! -d /home/deploy/health_blog/releases/20220324060036; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324060036'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [92030b61] Command: if test ! -d /home/deploy/health_blog/releases/20220324060036; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324060036'" 1>&2; false; fi
+ DEBUG [92030b61] Finished in 0.483 seconds with exit status 0 (successful).
+  INFO [00855f1c] Running /usr/bin/env echo "f1be1d3cf018fe578059b51c4b35a3ba5ba9c113" > REVISION as deploy@13.208.249.189
+ DEBUG [00855f1c] Command: cd /home/deploy/health_blog/releases/20220324060036 && /usr/bin/env echo "f1be1d3cf018fe578059b51c4b35a3ba5ba9c113" > REVISION
+  INFO [00855f1c] Finished in 0.454 seconds with exit status 0 (successful).
+  INFO [27b78671] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324060036/config as deploy@13.208.249.189
+ DEBUG [27b78671] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324060036/config
+  INFO [27b78671] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [699fb5d6] Running [ -L /home/deploy/health_blog/releases/20220324060036/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [699fb5d6] Command: [ -L /home/deploy/health_blog/releases/20220324060036/config/database.yml ]
+ DEBUG [699fb5d6] Finished in 0.455 seconds with exit status 1 (failed).
+ DEBUG [d22a9efe] Running [ -f /home/deploy/health_blog/releases/20220324060036/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [d22a9efe] Command: [ -f /home/deploy/health_blog/releases/20220324060036/config/database.yml ]
+ DEBUG [d22a9efe] Finished in 0.491 seconds with exit status 0 (successful).
+  INFO [a13e31c8] Running /usr/bin/env rm /home/deploy/health_blog/releases/20220324060036/config/database.yml as deploy@13.208.249.189
+ DEBUG [a13e31c8] Command: /usr/bin/env rm /home/deploy/health_blog/releases/20220324060036/config/database.yml
+  INFO [a13e31c8] Finished in 0.474 seconds with exit status 0 (successful).
+  INFO [6f4ad279] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/config/database.yml /home/deploy/health_blog/releases/20220324060036/config/database.yml as deploy@13.208.249.189
+ DEBUG [6f4ad279] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/config/database.yml /home/deploy/health_blog/releases/20220324060036/config/database.yml
+  INFO [6f4ad279] Finished in 0.487 seconds with exit status 0 (successful).
+ DEBUG [95939266] Running [ -L /home/deploy/health_blog/releases/20220324060036/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [95939266] Command: [ -L /home/deploy/health_blog/releases/20220324060036/config/application.yml ]
+ DEBUG [95939266] Finished in 0.837 seconds with exit status 1 (failed).
+ DEBUG [cb8d5119] Running [ -f /home/deploy/health_blog/releases/20220324060036/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [cb8d5119] Command: [ -f /home/deploy/health_blog/releases/20220324060036/config/application.yml ]
+ DEBUG [cb8d5119] Finished in 0.564 seconds with exit status 1 (failed).
+  INFO [b9dcf6f1] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/config/application.yml /home/deploy/health_blog/releases/20220324060036/config/application.yml as deploy@13.208.249.189
+ DEBUG [b9dcf6f1] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/config/application.yml /home/deploy/health_blog/releases/20220324060036/config/application.yml
+  INFO [b9dcf6f1] Finished in 0.472 seconds with exit status 0 (successful).
+  INFO [9a50a03d] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324060036 /home/deploy/health_blog/releases/20220324060036/tmp /home/deploy/health_blog/releases/20220324060036/vendor /home/deploy/health_blog/releases/20220324060036/public as deploy@13.208.249.189
+ DEBUG [9a50a03d] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324060036 /home/deploy/health_blog/releases/20220324060036/tmp /home/deploy/health_blog/releases/20220324060036/vendor /home/deploy/health_blog/releases/20220324060036/public
+  INFO [9a50a03d] Finished in 0.514 seconds with exit status 0 (successful).
+ DEBUG [c1baacbe] Running [ -L /home/deploy/health_blog/releases/20220324060036/bin ] as deploy@13.208.249.189
+ DEBUG [c1baacbe] Command: [ -L /home/deploy/health_blog/releases/20220324060036/bin ]
+ DEBUG [c1baacbe] Finished in 0.521 seconds with exit status 1 (failed).
+ DEBUG [67cd4a62] Running [ -d /home/deploy/health_blog/releases/20220324060036/bin ] as deploy@13.208.249.189
+ DEBUG [67cd4a62] Command: [ -d /home/deploy/health_blog/releases/20220324060036/bin ]
+ DEBUG [67cd4a62] Finished in 0.522 seconds with exit status 0 (successful).
+  INFO [6a3980ce] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324060036/bin as deploy@13.208.249.189
+ DEBUG [6a3980ce] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324060036/bin
+  INFO [6a3980ce] Finished in 0.535 seconds with exit status 0 (successful).
+  INFO [c071a1b3] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/bin /home/deploy/health_blog/releases/20220324060036/bin as deploy@13.208.249.189
+ DEBUG [c071a1b3] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/bin /home/deploy/health_blog/releases/20220324060036/bin
+  INFO [c071a1b3] Finished in 0.503 seconds with exit status 0 (successful).
+ DEBUG [51f1fbb7] Running [ -L /home/deploy/health_blog/releases/20220324060036/log ] as deploy@13.208.249.189
+ DEBUG [51f1fbb7] Command: [ -L /home/deploy/health_blog/releases/20220324060036/log ]
+ DEBUG [51f1fbb7] Finished in 0.550 seconds with exit status 1 (failed).
+ DEBUG [825beb04] Running [ -d /home/deploy/health_blog/releases/20220324060036/log ] as deploy@13.208.249.189
+ DEBUG [825beb04] Command: [ -d /home/deploy/health_blog/releases/20220324060036/log ]
+ DEBUG [825beb04] Finished in 0.602 seconds with exit status 0 (successful).
+  INFO [1f0809bf] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324060036/log as deploy@13.208.249.189
+ DEBUG [1f0809bf] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324060036/log
+  INFO [1f0809bf] Finished in 0.458 seconds with exit status 0 (successful).
+  INFO [c60e850a] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/log /home/deploy/health_blog/releases/20220324060036/log as deploy@13.208.249.189
+ DEBUG [c60e850a] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/log /home/deploy/health_blog/releases/20220324060036/log
+  INFO [c60e850a] Finished in 0.486 seconds with exit status 0 (successful).
+ DEBUG [06562f76] Running [ -L /home/deploy/health_blog/releases/20220324060036/tmp/pids ] as deploy@13.208.249.189
+ DEBUG [06562f76] Command: [ -L /home/deploy/health_blog/releases/20220324060036/tmp/pids ]
+ DEBUG [06562f76] Finished in 0.520 seconds with exit status 1 (failed).
+ DEBUG [e9092d9d] Running [ -d /home/deploy/health_blog/releases/20220324060036/tmp/pids ] as deploy@13.208.249.189
+ DEBUG [e9092d9d] Command: [ -d /home/deploy/health_blog/releases/20220324060036/tmp/pids ]
+ DEBUG [e9092d9d] Finished in 0.773 seconds with exit status 0 (successful).
+  INFO [8b88821c] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324060036/tmp/pids as deploy@13.208.249.189
+ DEBUG [8b88821c] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324060036/tmp/pids
+  INFO [8b88821c] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO [36621cf6] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/releases/20220324060036/tmp/pids as deploy@13.208.249.189
+ DEBUG [36621cf6] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/releases/20220324060036/tmp/pids
+  INFO [36621cf6] Finished in 0.458 seconds with exit status 0 (successful).
+ DEBUG [e89d78af] Running [ -L /home/deploy/health_blog/releases/20220324060036/tmp/cache ] as deploy@13.208.249.189
+ DEBUG [e89d78af] Command: [ -L /home/deploy/health_blog/releases/20220324060036/tmp/cache ]
+ DEBUG [e89d78af] Finished in 0.519 seconds with exit status 1 (failed).
+ DEBUG [407ac2fe] Running [ -d /home/deploy/health_blog/releases/20220324060036/tmp/cache ] as deploy@13.208.249.189
+ DEBUG [407ac2fe] Command: [ -d /home/deploy/health_blog/releases/20220324060036/tmp/cache ]
+ DEBUG [407ac2fe] Finished in 0.475 seconds with exit status 0 (successful).
+  INFO [96903a22] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324060036/tmp/cache as deploy@13.208.249.189
+ DEBUG [96903a22] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324060036/tmp/cache
+  INFO [96903a22] Finished in 0.554 seconds with exit status 0 (successful).
+  INFO [df8ee013] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/releases/20220324060036/tmp/cache as deploy@13.208.249.189
+ DEBUG [df8ee013] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/releases/20220324060036/tmp/cache
+  INFO [df8ee013] Finished in 0.485 seconds with exit status 0 (successful).
+ DEBUG [c30f9797] Running [ -L /home/deploy/health_blog/releases/20220324060036/tmp/sockets ] as deploy@13.208.249.189
+ DEBUG [c30f9797] Command: [ -L /home/deploy/health_blog/releases/20220324060036/tmp/sockets ]
+ DEBUG [c30f9797] Finished in 0.535 seconds with exit status 1 (failed).
+ DEBUG [96f6aa84] Running [ -d /home/deploy/health_blog/releases/20220324060036/tmp/sockets ] as deploy@13.208.249.189
+ DEBUG [96f6aa84] Command: [ -d /home/deploy/health_blog/releases/20220324060036/tmp/sockets ]
+ DEBUG [96f6aa84] Finished in 0.458 seconds with exit status 1 (failed).
+  INFO [eef33a3b] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/releases/20220324060036/tmp/sockets as deploy@13.208.249.189
+ DEBUG [eef33a3b] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/releases/20220324060036/tmp/sockets
+  INFO [eef33a3b] Finished in 0.519 seconds with exit status 0 (successful).
+ DEBUG [623ae833] Running [ -L /home/deploy/health_blog/releases/20220324060036/vendor/bundle ] as deploy@13.208.249.189
+ DEBUG [623ae833] Command: [ -L /home/deploy/health_blog/releases/20220324060036/vendor/bundle ]
+ DEBUG [623ae833] Finished in 0.471 seconds with exit status 1 (failed).
+ DEBUG [76251ae2] Running [ -d /home/deploy/health_blog/releases/20220324060036/vendor/bundle ] as deploy@13.208.249.189
+ DEBUG [76251ae2] Command: [ -d /home/deploy/health_blog/releases/20220324060036/vendor/bundle ]
+ DEBUG [76251ae2] Finished in 0.619 seconds with exit status 0 (successful).
+  INFO [9238d1c9] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324060036/vendor/bundle as deploy@13.208.249.189
+ DEBUG [9238d1c9] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324060036/vendor/bundle
+  INFO [9238d1c9] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO [d01e3006] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/releases/20220324060036/vendor/bundle as deploy@13.208.249.189
+ DEBUG [d01e3006] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/releases/20220324060036/vendor/bundle
+  INFO [d01e3006] Finished in 0.503 seconds with exit status 0 (successful).
+ DEBUG [1abdcb19] Running [ -L /home/deploy/health_blog/releases/20220324060036/public/system ] as deploy@13.208.249.189
+ DEBUG [1abdcb19] Command: [ -L /home/deploy/health_blog/releases/20220324060036/public/system ]
+ DEBUG [1abdcb19] Finished in 0.488 seconds with exit status 1 (failed).
+ DEBUG [2f9604a0] Running [ -d /home/deploy/health_blog/releases/20220324060036/public/system ] as deploy@13.208.249.189
+ DEBUG [2f9604a0] Command: [ -d /home/deploy/health_blog/releases/20220324060036/public/system ]
+ DEBUG [2f9604a0] Finished in 0.485 seconds with exit status 1 (failed).
+  INFO [c8574d57] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/releases/20220324060036/public/system as deploy@13.208.249.189
+ DEBUG [c8574d57] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/releases/20220324060036/public/system
+  INFO [c8574d57] Finished in 0.466 seconds with exit status 0 (successful).
+ DEBUG [52d44355] Running [ -L /home/deploy/health_blog/releases/20220324060036/public/uploads ] as deploy@13.208.249.189
+ DEBUG [52d44355] Command: [ -L /home/deploy/health_blog/releases/20220324060036/public/uploads ]
+ DEBUG [52d44355] Finished in 0.548 seconds with exit status 1 (failed).
+ DEBUG [f72c1c80] Running [ -d /home/deploy/health_blog/releases/20220324060036/public/uploads ] as deploy@13.208.249.189
+ DEBUG [f72c1c80] Command: [ -d /home/deploy/health_blog/releases/20220324060036/public/uploads ]
+ DEBUG [f72c1c80] Finished in 0.522 seconds with exit status 1 (failed).
+  INFO [fe6688dc] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/releases/20220324060036/public/uploads as deploy@13.208.249.189
+ DEBUG [fe6688dc] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/releases/20220324060036/public/uploads
+  INFO [fe6688dc] Finished in 0.552 seconds with exit status 0 (successful).
+ DEBUG [4b4d17e5] Running [ -L /home/deploy/health_blog/releases/20220324060036/public/assets ] as deploy@13.208.249.189
+ DEBUG [4b4d17e5] Command: [ -L /home/deploy/health_blog/releases/20220324060036/public/assets ]
+ DEBUG [4b4d17e5] Finished in 0.504 seconds with exit status 1 (failed).
+ DEBUG [ca76fce8] Running [ -d /home/deploy/health_blog/releases/20220324060036/public/assets ] as deploy@13.208.249.189
+ DEBUG [ca76fce8] Command: [ -d /home/deploy/health_blog/releases/20220324060036/public/assets ]
+ DEBUG [ca76fce8] Finished in 0.630 seconds with exit status 1 (failed).
+  INFO [af647667] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/assets /home/deploy/health_blog/releases/20220324060036/public/assets as deploy@13.208.249.189
+ DEBUG [af647667] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/assets /home/deploy/health_blog/releases/20220324060036/public/assets
+  INFO [af647667] Finished in 0.455 seconds with exit status 0 (successful).
+ DEBUG [bd142fc5] Running if test ! -d /home/deploy/health_blog/releases/20220324060036; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324060036'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [bd142fc5] Command: if test ! -d /home/deploy/health_blog/releases/20220324060036; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324060036'" 1>&2; false; fi
+ DEBUG [bd142fc5] Finished in 0.483 seconds with exit status 0 (successful).
+  INFO [a2c33dad] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local deployment true as deploy@13.208.249.189
+ DEBUG [a2c33dad] Command: cd /home/deploy/health_blog/releases/20220324060036 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local deployment true
+  INFO [a2c33dad] Finished in 1.019 seconds with exit status 0 (successful).
+  INFO [2aeda39b] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local path /home/deploy/health_blog/shared/bundle as deploy@13.208.249.189
+ DEBUG [2aeda39b] Command: cd /home/deploy/health_blog/releases/20220324060036 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local path /home/deploy/health_blog/shared/bundle
+ DEBUG [2aeda39b] 	You are replacing the current local value of path, which is currently "vendor/bundle"
+ DEBUG [2aeda39b] 	
+  INFO [2aeda39b] Finished in 1.045 seconds with exit status 0 (successful).
+  INFO [ad78498f] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local without development:test as deploy@13.208.249.189
+ DEBUG [ad78498f] Command: cd /home/deploy/health_blog/releases/20220324060036 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local without development:test
+  INFO [ad78498f] Finished in 1.020 seconds with exit status 0 (successful).
+ DEBUG [1eaa1a29] Running if test ! -d /home/deploy/health_blog/releases/20220324060036; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324060036'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [1eaa1a29] Command: if test ! -d /home/deploy/health_blog/releases/20220324060036; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324060036'" 1>&2; false; fi
+ DEBUG [1eaa1a29] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [87ffef4f] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle check as deploy@13.208.249.189
+ DEBUG [87ffef4f] Command: cd /home/deploy/health_blog/releases/20220324060036 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle check
+ DEBUG [87ffef4f] 	[31mThe following gems are missing[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * rake (13.0.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * concurrent-ruby (1.1.9)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * i18n (1.8.10)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * minitest (5.14.4)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * thread_safe (0.3.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * tzinfo (1.2.9)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * activesupport (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * builder (3.2.4)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * erubi (1.10.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * rails-dom-testing (2.0.3)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * crass (1.0.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * loofah (2.12.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * rails-html-sanitizer (1.4.2)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * actionview (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * rack (2.2.3)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * rack-test (1.1.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * actionpack (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * nio4r (2.5.8)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * websocket-extensions (0.1.5)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * websocket-driver (0.7.5)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * actioncable (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * globalid (0.5.2)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * activejob (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * mini_mime (1.1.1)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * mail (2.7.1)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * actionmailer (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * activemodel (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * arel (9.0.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * activerecord (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * marcel (1.0.1)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * activestorage (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * msgpack (1.4.2)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * bootsnap (1.8.1)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * execjs (2.8.1)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * method_source (1.0.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * thor (1.1.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * railties (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * coffee-rails (4.2.2)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * duktape (2.6.0.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * ed25519 (1.3.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * figaro (1.2.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * jbuilder (2.11.2)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * puma (3.12.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * sprockets (3.7.2)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * sprockets-rails (3.2.2)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * rails (5.2.6)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * rb-fsevent (0.11.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * sass-listen (4.0.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * sass (3.7.4)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * tilt (2.0.10)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * sass-rails (5.1.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * sqlite3 (1.4.2)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * turbolinks-source (5.2.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * turbolinks (5.2.1)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * uglifier (4.2.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[31m * webrick (1.7.0)[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [87ffef4f] 	
+ DEBUG [87ffef4f] Finished in 1.260 seconds with exit status 1 (failed).
+  INFO [fdb1fd60] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle install --jobs 4 --quiet as deploy@13.208.249.189
+ DEBUG [fdb1fd60] Command: cd /home/deploy/health_blog/releases/20220324060036 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle install --jobs 4 --quiet
+ DEBUG [fdb1fd60] 	[31mUnable to find a spec satisfying bcrypt_pbkdf (>= 1.0, < 2.0) in the set.
+ DEBUG [fdb1fd60] 	
+ DEBUG [fdb1fd60] 	Perhaps the lockfile is corrupted? Found bcrypt_pbkdf (1.1.0-x64-mingw32) that
+ DEBUG [fdb1fd60] 	
+ DEBUG [fdb1fd60] 	did not match the current platform.[0m
+ DEBUG [fdb1fd60] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-24 12:33:09 +0530 cap deploy production
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7c4e6c6c] Running ~/.rvm/bin/rvm version as deploy@13.208.249.189
+ DEBUG [7c4e6c6c] Command: ~/.rvm/bin/rvm version
+ DEBUG [7c4e6c6c] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [7c4e6c6c] 	
+ DEBUG [7c4e6c6c] Finished in 2.702 seconds with exit status 0 (successful).
+ DEBUG [b6ca7037] Running ~/.rvm/bin/rvm current as deploy@13.208.249.189
+ DEBUG [b6ca7037] Command: ~/.rvm/bin/rvm current
+ DEBUG [b6ca7037] 	system
+ DEBUG [b6ca7037] 	
+ DEBUG [b6ca7037] Finished in 0.640 seconds with exit status 0 (successful).
+ DEBUG [f465cf80] Running ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version as deploy@13.208.249.189
+ DEBUG [f465cf80] Command: ~/.rvm/bin/rvm ruby-2.7.4 do ruby --version
+ DEBUG [f465cf80] 	ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+ DEBUG [f465cf80] 	
+ DEBUG [f465cf80] Finished in 0.874 seconds with exit status 0 (successful).
+  INFO [a560e62e] Running /usr/bin/env mkdir -p /tmp as deploy@13.208.249.189
+ DEBUG [a560e62e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a560e62e] Finished in 0.453 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-7e2a039a3df77fe2537c.sh 0.0%
+  INFO Uploading /tmp/git-ssh-7e2a039a3df77fe2537c.sh 100.0%
+  INFO [7ab3b827] Running /usr/bin/env chmod 700 /tmp/git-ssh-7e2a039a3df77fe2537c.sh as deploy@13.208.249.189
+ DEBUG [7ab3b827] Command: /usr/bin/env chmod 700 /tmp/git-ssh-7e2a039a3df77fe2537c.sh
+  INFO [7ab3b827] Finished in 0.452 seconds with exit status 0 (successful).
+  INFO [b0e0cc67] Running /usr/bin/env git ls-remote https://github.com/TarunWAL/health_blog.git HEAD as deploy@13.208.249.189
+ DEBUG [b0e0cc67] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-7e2a039a3df77fe2537c.sh" ; /usr/bin/env git ls-remote https://github.com/TarunWAL/health_blog.git HEAD )
+ DEBUG [b0e0cc67] 	f1be1d3cf018fe578059b51c4b35a3ba5ba9c113
+ DEBUG [b0e0cc67] 		HEAD
+  INFO [b0e0cc67] Finished in 1.352 seconds with exit status 0 (successful).
+  INFO [2aebac5e] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases as deploy@13.208.249.189
+ DEBUG [2aebac5e] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared /home/deploy/health_blog/releases
+  INFO [2aebac5e] Finished in 0.442 seconds with exit status 0 (successful).
+  INFO [6adce36a] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets as deploy@13.208.249.189
+ DEBUG [6adce36a] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/bin /home/deploy/health_blog/shared/log /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/shared/public/assets
+  INFO [6adce36a] Finished in 0.493 seconds with exit status 0 (successful).
+  INFO [92a6a5c3] Running /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config as deploy@13.208.249.189
+ DEBUG [92a6a5c3] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/shared/config
+  INFO [92a6a5c3] Finished in 0.448 seconds with exit status 0 (successful).
+ DEBUG [e24c09f1] Running [ -f /home/deploy/health_blog/shared/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [e24c09f1] Command: [ -f /home/deploy/health_blog/shared/config/database.yml ]
+ DEBUG [e24c09f1] Finished in 0.994 seconds with exit status 0 (successful).
+ DEBUG [5a2c9e25] Running [ -f /home/deploy/health_blog/shared/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [5a2c9e25] Command: [ -f /home/deploy/health_blog/shared/config/application.yml ]
+ DEBUG [5a2c9e25] Finished in 0.449 seconds with exit status 0 (successful).
+ DEBUG [b5d4c4d2] Running [ -f /home/deploy/health_blog/current/REVISION ] as deploy@13.208.249.189
+ DEBUG [b5d4c4d2] Command: [ -f /home/deploy/health_blog/current/REVISION ]
+ DEBUG [b5d4c4d2] Finished in 0.498 seconds with exit status 1 (failed).
+ DEBUG [778c05ff] Running [ -f /home/deploy/health_blog/repo/HEAD ] as deploy@13.208.249.189
+ DEBUG [778c05ff] Command: [ -f /home/deploy/health_blog/repo/HEAD ]
+ DEBUG [778c05ff] Finished in 0.452 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/health_blog/repo
+ DEBUG [c6ed1f63] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [c6ed1f63] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [c6ed1f63] Finished in 0.479 seconds with exit status 0 (successful).
+  INFO [762e3092] Running /usr/bin/env git remote set-url origin https://github.com/TarunWAL/health_blog.git as deploy@13.208.249.189
+ DEBUG [762e3092] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-7e2a039a3df77fe2537c.sh" ; /usr/bin/env git remote set-url origin https://github.com/TarunWAL/health_blog.git )
+  INFO [762e3092] Finished in 0.457 seconds with exit status 0 (successful).
+  INFO [530384b0] Running /usr/bin/env git remote update --prune as deploy@13.208.249.189
+ DEBUG [530384b0] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-7e2a039a3df77fe2537c.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [530384b0] 	Fetching origin
+ DEBUG [530384b0] 	
+  INFO [530384b0] Finished in 0.784 seconds with exit status 0 (successful).
+ DEBUG [ecc0d988] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [ecc0d988] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [ecc0d988] Finished in 0.916 seconds with exit status 0 (successful).
+  INFO [54103e48] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324070320 as deploy@13.208.249.189
+ DEBUG [54103e48] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-7e2a039a3df77fe2537c.sh" ; /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324070320 )
+  INFO [54103e48] Finished in 0.445 seconds with exit status 0 (successful).
+  INFO [1045a680] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220324070320 as deploy@13.208.249.189
+ DEBUG [1045a680] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-7e2a039a3df77fe2537c.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/deploy/health_blog/releases/20220324070320 )
+  INFO [1045a680] Finished in 1.960 seconds with exit status 0 (successful).
+ DEBUG [159cc7ae] Running if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [159cc7ae] Command: if test ! -d /home/deploy/health_blog/repo; then echo "Directory does not exist '/home/deploy/health_blog/repo'" 1>&2; false; fi
+ DEBUG [159cc7ae] Finished in 0.639 seconds with exit status 0 (successful).
+ DEBUG [d4e1a910] Running /usr/bin/env git rev-list --max-count=1 main as deploy@13.208.249.189
+ DEBUG [d4e1a910] Command: cd /home/deploy/health_blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-7e2a039a3df77fe2537c.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [d4e1a910] 	f1be1d3cf018fe578059b51c4b35a3ba5ba9c113
+ DEBUG [d4e1a910] 	
+ DEBUG [d4e1a910] Finished in 0.611 seconds with exit status 0 (successful).
+ DEBUG [bd0117e4] Running if test ! -d /home/deploy/health_blog/releases/20220324070320; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324070320'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [bd0117e4] Command: if test ! -d /home/deploy/health_blog/releases/20220324070320; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324070320'" 1>&2; false; fi
+ DEBUG [bd0117e4] Finished in 0.501 seconds with exit status 0 (successful).
+  INFO [b61d2747] Running /usr/bin/env echo "f1be1d3cf018fe578059b51c4b35a3ba5ba9c113" > REVISION as deploy@13.208.249.189
+ DEBUG [b61d2747] Command: cd /home/deploy/health_blog/releases/20220324070320 && /usr/bin/env echo "f1be1d3cf018fe578059b51c4b35a3ba5ba9c113" > REVISION
+  INFO [b61d2747] Finished in 0.451 seconds with exit status 0 (successful).
+  INFO [24171ad3] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324070320/config as deploy@13.208.249.189
+ DEBUG [24171ad3] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324070320/config
+  INFO [24171ad3] Finished in 0.623 seconds with exit status 0 (successful).
+ DEBUG [11b517e5] Running [ -L /home/deploy/health_blog/releases/20220324070320/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [11b517e5] Command: [ -L /home/deploy/health_blog/releases/20220324070320/config/database.yml ]
+ DEBUG [11b517e5] Finished in 0.452 seconds with exit status 1 (failed).
+ DEBUG [21306544] Running [ -f /home/deploy/health_blog/releases/20220324070320/config/database.yml ] as deploy@13.208.249.189
+ DEBUG [21306544] Command: [ -f /home/deploy/health_blog/releases/20220324070320/config/database.yml ]
+ DEBUG [21306544] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [826c81d7] Running /usr/bin/env rm /home/deploy/health_blog/releases/20220324070320/config/database.yml as deploy@13.208.249.189
+ DEBUG [826c81d7] Command: /usr/bin/env rm /home/deploy/health_blog/releases/20220324070320/config/database.yml
+  INFO [826c81d7] Finished in 0.831 seconds with exit status 0 (successful).
+  INFO [b19eab81] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/config/database.yml /home/deploy/health_blog/releases/20220324070320/config/database.yml as deploy@13.208.249.189
+ DEBUG [b19eab81] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/config/database.yml /home/deploy/health_blog/releases/20220324070320/config/database.yml
+  INFO [b19eab81] Finished in 0.829 seconds with exit status 0 (successful).
+ DEBUG [99700f3e] Running [ -L /home/deploy/health_blog/releases/20220324070320/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [99700f3e] Command: [ -L /home/deploy/health_blog/releases/20220324070320/config/application.yml ]
+ DEBUG [99700f3e] Finished in 0.602 seconds with exit status 1 (failed).
+ DEBUG [6b45066a] Running [ -f /home/deploy/health_blog/releases/20220324070320/config/application.yml ] as deploy@13.208.249.189
+ DEBUG [6b45066a] Command: [ -f /home/deploy/health_blog/releases/20220324070320/config/application.yml ]
+ DEBUG [6b45066a] Finished in 0.636 seconds with exit status 1 (failed).
+  INFO [a4c7e031] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/config/application.yml /home/deploy/health_blog/releases/20220324070320/config/application.yml as deploy@13.208.249.189
+ DEBUG [a4c7e031] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/config/application.yml /home/deploy/health_blog/releases/20220324070320/config/application.yml
+  INFO [a4c7e031] Finished in 0.450 seconds with exit status 0 (successful).
+  INFO [a75cd462] Running /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324070320 /home/deploy/health_blog/releases/20220324070320/tmp /home/deploy/health_blog/releases/20220324070320/vendor /home/deploy/health_blog/releases/20220324070320/public as deploy@13.208.249.189
+ DEBUG [a75cd462] Command: /usr/bin/env mkdir -p /home/deploy/health_blog/releases/20220324070320 /home/deploy/health_blog/releases/20220324070320/tmp /home/deploy/health_blog/releases/20220324070320/vendor /home/deploy/health_blog/releases/20220324070320/public
+  INFO [a75cd462] Finished in 0.490 seconds with exit status 0 (successful).
+ DEBUG [d123edcb] Running [ -L /home/deploy/health_blog/releases/20220324070320/bin ] as deploy@13.208.249.189
+ DEBUG [d123edcb] Command: [ -L /home/deploy/health_blog/releases/20220324070320/bin ]
+ DEBUG [d123edcb] Finished in 0.450 seconds with exit status 1 (failed).
+ DEBUG [887aca38] Running [ -d /home/deploy/health_blog/releases/20220324070320/bin ] as deploy@13.208.249.189
+ DEBUG [887aca38] Command: [ -d /home/deploy/health_blog/releases/20220324070320/bin ]
+ DEBUG [887aca38] Finished in 0.517 seconds with exit status 0 (successful).
+  INFO [b1c21e0a] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324070320/bin as deploy@13.208.249.189
+ DEBUG [b1c21e0a] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324070320/bin
+  INFO [b1c21e0a] Finished in 0.455 seconds with exit status 0 (successful).
+  INFO [c5420959] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/bin /home/deploy/health_blog/releases/20220324070320/bin as deploy@13.208.249.189
+ DEBUG [c5420959] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/bin /home/deploy/health_blog/releases/20220324070320/bin
+  INFO [c5420959] Finished in 0.501 seconds with exit status 0 (successful).
+ DEBUG [606d7b33] Running [ -L /home/deploy/health_blog/releases/20220324070320/log ] as deploy@13.208.249.189
+ DEBUG [606d7b33] Command: [ -L /home/deploy/health_blog/releases/20220324070320/log ]
+ DEBUG [606d7b33] Finished in 0.446 seconds with exit status 1 (failed).
+ DEBUG [b357b14e] Running [ -d /home/deploy/health_blog/releases/20220324070320/log ] as deploy@13.208.249.189
+ DEBUG [b357b14e] Command: [ -d /home/deploy/health_blog/releases/20220324070320/log ]
+ DEBUG [b357b14e] Finished in 0.488 seconds with exit status 0 (successful).
+  INFO [9cbcdf6c] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324070320/log as deploy@13.208.249.189
+ DEBUG [9cbcdf6c] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324070320/log
+  INFO [9cbcdf6c] Finished in 0.458 seconds with exit status 0 (successful).
+  INFO [f4339146] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/log /home/deploy/health_blog/releases/20220324070320/log as deploy@13.208.249.189
+ DEBUG [f4339146] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/log /home/deploy/health_blog/releases/20220324070320/log
+  INFO [f4339146] Finished in 0.498 seconds with exit status 0 (successful).
+ DEBUG [7b8c1e96] Running [ -L /home/deploy/health_blog/releases/20220324070320/tmp/pids ] as deploy@13.208.249.189
+ DEBUG [7b8c1e96] Command: [ -L /home/deploy/health_blog/releases/20220324070320/tmp/pids ]
+ DEBUG [7b8c1e96] Finished in 0.450 seconds with exit status 1 (failed).
+ DEBUG [ce7f4d48] Running [ -d /home/deploy/health_blog/releases/20220324070320/tmp/pids ] as deploy@13.208.249.189
+ DEBUG [ce7f4d48] Command: [ -d /home/deploy/health_blog/releases/20220324070320/tmp/pids ]
+ DEBUG [ce7f4d48] Finished in 0.500 seconds with exit status 0 (successful).
+  INFO [bd2a5f36] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324070320/tmp/pids as deploy@13.208.249.189
+ DEBUG [bd2a5f36] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324070320/tmp/pids
+  INFO [bd2a5f36] Finished in 0.451 seconds with exit status 0 (successful).
+  INFO [eaa6cbe6] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/releases/20220324070320/tmp/pids as deploy@13.208.249.189
+ DEBUG [eaa6cbe6] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/pids /home/deploy/health_blog/releases/20220324070320/tmp/pids
+  INFO [eaa6cbe6] Finished in 0.488 seconds with exit status 0 (successful).
+ DEBUG [63ed6d21] Running [ -L /home/deploy/health_blog/releases/20220324070320/tmp/cache ] as deploy@13.208.249.189
+ DEBUG [63ed6d21] Command: [ -L /home/deploy/health_blog/releases/20220324070320/tmp/cache ]
+ DEBUG [63ed6d21] Finished in 0.451 seconds with exit status 1 (failed).
+ DEBUG [69ccb6a0] Running [ -d /home/deploy/health_blog/releases/20220324070320/tmp/cache ] as deploy@13.208.249.189
+ DEBUG [69ccb6a0] Command: [ -d /home/deploy/health_blog/releases/20220324070320/tmp/cache ]
+ DEBUG [69ccb6a0] Finished in 0.499 seconds with exit status 0 (successful).
+  INFO [132b2fdf] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324070320/tmp/cache as deploy@13.208.249.189
+ DEBUG [132b2fdf] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324070320/tmp/cache
+  INFO [132b2fdf] Finished in 0.502 seconds with exit status 0 (successful).
+  INFO [e3e53f42] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/releases/20220324070320/tmp/cache as deploy@13.208.249.189
+ DEBUG [e3e53f42] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/cache /home/deploy/health_blog/releases/20220324070320/tmp/cache
+  INFO [e3e53f42] Finished in 0.498 seconds with exit status 0 (successful).
+ DEBUG [c526d082] Running [ -L /home/deploy/health_blog/releases/20220324070320/tmp/sockets ] as deploy@13.208.249.189
+ DEBUG [c526d082] Command: [ -L /home/deploy/health_blog/releases/20220324070320/tmp/sockets ]
+ DEBUG [c526d082] Finished in 0.451 seconds with exit status 1 (failed).
+ DEBUG [0d3ef670] Running [ -d /home/deploy/health_blog/releases/20220324070320/tmp/sockets ] as deploy@13.208.249.189
+ DEBUG [0d3ef670] Command: [ -d /home/deploy/health_blog/releases/20220324070320/tmp/sockets ]
+ DEBUG [0d3ef670] Finished in 0.499 seconds with exit status 1 (failed).
+  INFO [3eed824c] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/releases/20220324070320/tmp/sockets as deploy@13.208.249.189
+ DEBUG [3eed824c] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/tmp/sockets /home/deploy/health_blog/releases/20220324070320/tmp/sockets
+  INFO [3eed824c] Finished in 0.451 seconds with exit status 0 (successful).
+ DEBUG [3b6d0981] Running [ -L /home/deploy/health_blog/releases/20220324070320/vendor/bundle ] as deploy@13.208.249.189
+ DEBUG [3b6d0981] Command: [ -L /home/deploy/health_blog/releases/20220324070320/vendor/bundle ]
+ DEBUG [3b6d0981] Finished in 0.498 seconds with exit status 1 (failed).
+ DEBUG [d964599d] Running [ -d /home/deploy/health_blog/releases/20220324070320/vendor/bundle ] as deploy@13.208.249.189
+ DEBUG [d964599d] Command: [ -d /home/deploy/health_blog/releases/20220324070320/vendor/bundle ]
+ DEBUG [d964599d] Finished in 0.453 seconds with exit status 0 (successful).
+  INFO [c2a3c0b6] Running /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324070320/vendor/bundle as deploy@13.208.249.189
+ DEBUG [c2a3c0b6] Command: /usr/bin/env rm -rf /home/deploy/health_blog/releases/20220324070320/vendor/bundle
+  INFO [c2a3c0b6] Finished in 1.051 seconds with exit status 0 (successful).
+  INFO [13fce6bd] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/releases/20220324070320/vendor/bundle as deploy@13.208.249.189
+ DEBUG [13fce6bd] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/vendor/bundle /home/deploy/health_blog/releases/20220324070320/vendor/bundle
+  INFO [13fce6bd] Finished in 0.451 seconds with exit status 0 (successful).
+ DEBUG [5566afd9] Running [ -L /home/deploy/health_blog/releases/20220324070320/public/system ] as deploy@13.208.249.189
+ DEBUG [5566afd9] Command: [ -L /home/deploy/health_blog/releases/20220324070320/public/system ]
+ DEBUG [5566afd9] Finished in 0.498 seconds with exit status 1 (failed).
+ DEBUG [fc935cce] Running [ -d /home/deploy/health_blog/releases/20220324070320/public/system ] as deploy@13.208.249.189
+ DEBUG [fc935cce] Command: [ -d /home/deploy/health_blog/releases/20220324070320/public/system ]
+ DEBUG [fc935cce] Finished in 0.453 seconds with exit status 1 (failed).
+  INFO [defa52a5] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/releases/20220324070320/public/system as deploy@13.208.249.189
+ DEBUG [defa52a5] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/system /home/deploy/health_blog/releases/20220324070320/public/system
+  INFO [defa52a5] Finished in 0.497 seconds with exit status 0 (successful).
+ DEBUG [a0d63883] Running [ -L /home/deploy/health_blog/releases/20220324070320/public/uploads ] as deploy@13.208.249.189
+ DEBUG [a0d63883] Command: [ -L /home/deploy/health_blog/releases/20220324070320/public/uploads ]
+ DEBUG [a0d63883] Finished in 0.451 seconds with exit status 1 (failed).
+ DEBUG [437d5e15] Running [ -d /home/deploy/health_blog/releases/20220324070320/public/uploads ] as deploy@13.208.249.189
+ DEBUG [437d5e15] Command: [ -d /home/deploy/health_blog/releases/20220324070320/public/uploads ]
+ DEBUG [437d5e15] Finished in 0.499 seconds with exit status 1 (failed).
+  INFO [09107575] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/releases/20220324070320/public/uploads as deploy@13.208.249.189
+ DEBUG [09107575] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/uploads /home/deploy/health_blog/releases/20220324070320/public/uploads
+  INFO [09107575] Finished in 0.451 seconds with exit status 0 (successful).
+ DEBUG [c711b9e0] Running [ -L /home/deploy/health_blog/releases/20220324070320/public/assets ] as deploy@13.208.249.189
+ DEBUG [c711b9e0] Command: [ -L /home/deploy/health_blog/releases/20220324070320/public/assets ]
+ DEBUG [c711b9e0] Finished in 0.498 seconds with exit status 1 (failed).
+ DEBUG [b26b784b] Running [ -d /home/deploy/health_blog/releases/20220324070320/public/assets ] as deploy@13.208.249.189
+ DEBUG [b26b784b] Command: [ -d /home/deploy/health_blog/releases/20220324070320/public/assets ]
+ DEBUG [b26b784b] Finished in 0.453 seconds with exit status 1 (failed).
+  INFO [20ce56b2] Running /usr/bin/env ln -s /home/deploy/health_blog/shared/public/assets /home/deploy/health_blog/releases/20220324070320/public/assets as deploy@13.208.249.189
+ DEBUG [20ce56b2] Command: /usr/bin/env ln -s /home/deploy/health_blog/shared/public/assets /home/deploy/health_blog/releases/20220324070320/public/assets
+  INFO [20ce56b2] Finished in 0.488 seconds with exit status 0 (successful).
+ DEBUG [9a74b300] Running if test ! -d /home/deploy/health_blog/releases/20220324070320; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324070320'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [9a74b300] Command: if test ! -d /home/deploy/health_blog/releases/20220324070320; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324070320'" 1>&2; false; fi
+ DEBUG [9a74b300] Finished in 0.449 seconds with exit status 0 (successful).
+  INFO [630ef9a8] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local deployment true as deploy@13.208.249.189
+ DEBUG [630ef9a8] Command: cd /home/deploy/health_blog/releases/20220324070320 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local deployment true
+  INFO [630ef9a8] Finished in 1.247 seconds with exit status 0 (successful).
+  INFO [220d163f] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local path /home/deploy/health_blog/shared/bundle as deploy@13.208.249.189
+ DEBUG [220d163f] Command: cd /home/deploy/health_blog/releases/20220324070320 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local path /home/deploy/health_blog/shared/bundle
+ DEBUG [220d163f] 	You are replacing the current local value of path, which is currently "vendor/bundle"
+ DEBUG [220d163f] 	
+  INFO [220d163f] Finished in 1.033 seconds with exit status 0 (successful).
+  INFO [311cdef8] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local without development:test as deploy@13.208.249.189
+ DEBUG [311cdef8] Command: cd /home/deploy/health_blog/releases/20220324070320 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle config --local without development:test
+  INFO [311cdef8] Finished in 1.074 seconds with exit status 0 (successful).
+ DEBUG [d86d4e5e] Running if test ! -d /home/deploy/health_blog/releases/20220324070320; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324070320'" 1>&2; false; fi as deploy@13.208.249.189
+ DEBUG [d86d4e5e] Command: if test ! -d /home/deploy/health_blog/releases/20220324070320; then echo "Directory does not exist '/home/deploy/health_blog/releases/20220324070320'" 1>&2; false; fi
+ DEBUG [d86d4e5e] Finished in 1.167 seconds with exit status 0 (successful).
+ DEBUG [06aa7170] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle check as deploy@13.208.249.189
+ DEBUG [06aa7170] Command: cd /home/deploy/health_blog/releases/20220324070320 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle check
+ DEBUG [06aa7170] 	[31mThe following gems are missing[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * rake (13.0.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * concurrent-ruby (1.1.9)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * i18n (1.8.10)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * minitest (5.14.4)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * thread_safe (0.3.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * tzinfo (1.2.9)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * activesupport (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * builder (3.2.4)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * erubi (1.10.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * rails-dom-testing (2.0.3)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * crass (1.0.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * loofah (2.12.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * rails-html-sanitizer (1.4.2)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * actionview (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * rack (2.2.3)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * rack-test (1.1.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * actionpack (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * nio4r (2.5.8)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * websocket-extensions (0.1.5)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * websocket-driver (0.7.5)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * actioncable (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * globalid (0.5.2)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * activejob (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * mini_mime (1.1.1)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * mail (2.7.1)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * actionmailer (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * activemodel (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * arel (9.0.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * activerecord (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * marcel (1.0.1)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * activestorage (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * msgpack (1.4.2)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * bootsnap (1.8.1)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * execjs (2.8.1)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * method_source (1.0.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * thor (1.1.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * railties (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * coffee-rails (4.2.2)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * duktape (2.6.0.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * ed25519 (1.3.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * figaro (1.2.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * jbuilder (2.11.2)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * puma (3.12.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * sprockets (3.7.2)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * sprockets-rails (3.2.2)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * rails (5.2.6)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * rb-fsevent (0.11.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * sass-listen (4.0.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * sass (3.7.4)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * tilt (2.0.10)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * sass-rails (5.1.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * sqlite3 (1.4.2)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * turbolinks-source (5.2.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * turbolinks (5.2.1)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * uglifier (4.2.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[31m * webrick (1.7.0)[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [06aa7170] 	
+ DEBUG [06aa7170] Finished in 1.998 seconds with exit status 1 (failed).
+  INFO [1f8bb7aa] Running ~/.rvm/bin/rvm ruby-2.7.4 do bundle install --jobs 4 --quiet as deploy@13.208.249.189
+ DEBUG [1f8bb7aa] Command: cd /home/deploy/health_blog/releases/20220324070320 && ~/.rvm/bin/rvm ruby-2.7.4 do bundle install --jobs 4 --quiet
+ DEBUG [1f8bb7aa] 	[31mUnable to find a spec satisfying bcrypt_pbkdf (>= 1.0, < 2.0) in the set.
+ DEBUG [1f8bb7aa] 	
+ DEBUG [1f8bb7aa] 	Perhaps the lockfile is corrupted? Found bcrypt_pbkdf (1.1.0-x64-mingw32) that
+ DEBUG [1f8bb7aa] 	
+ DEBUG [1f8bb7aa] 	did not match the current platform.[0m
